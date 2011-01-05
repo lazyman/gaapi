@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="org.tingoo.gaapi.bean.Smslog" table="smslog_" schema="dbo" catalog="gaapi">
+        <id name="id" type="int">
+            <column name="id_" />
+            <generator class="assigned" />
+        </id>
+        <property name="sendtime" type="timestamp">
+            <column name="sendtime_" length="23" />
+        </property>
+        <property name="message" type="clob">
+            <column name="message_" />
+        </property>
+        <property name="mobile" type="clob">
+            <column name="mobile_" />
+        </property>
+        <property name="ip" type="string">
+            <column name="ip_" length="20" />
+        </property>
+    </class>
+</hibernate-mapping>

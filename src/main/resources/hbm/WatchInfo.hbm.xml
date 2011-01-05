@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.com.lazyhome.ga.duty">
+	<class name="WatchInfo" table="t_watchinfo1">
+		<id name="id">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+
+		<property name="substation" type="string"></property>
+		<property name="watchmen" type="string"></property>
+		<property name="pid" type="integer"></property>
+		<property name="sort" type="integer"></property>
+		<property name="filltime" type="date">
+			<column name="filltime"></column>
+		</property>
+		<property name="watchdept" type="string"></property>
+		<property name="watchtel" type="string"></property>
+	</class>
+</hibernate-mapping>

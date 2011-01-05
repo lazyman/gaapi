@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-12-28 16:26:07 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="org.tingoo.gaapi.bean.Department" table="department_" schema="dbo" catalog="gaapi">
+        <id name="id" type="string">
+            <column name="id_" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name_" length="50" />
+        </property>
+        <property name="code" type="string">
+            <column name="code_" length="50" />
+        </property>
+        <property name="parent" type="string">
+            <column name="parent_" length="50" />
+        </property>
+        <property name="type" type="java.lang.Integer">
+            <column name="type_" />
+        </property>
+        <property name="orderindex" type="java.lang.Integer">
+            <column name="orderindex_" />
+        </property>
+        <property name="isorg" type="string">
+            <column name="isorg" length="1" />
+        </property>
+        <property name="ishaschid" type="string">
+            <column name="ishaschid" length="1" />
+        </property>
+        <property name="oaid" type="java.lang.Integer">
+            <column name="oaid" />
+        </property>
+        <property name="basetype" type="string">
+            <column name="basetype" length="1" />
+        </property>
+        <property name="islooktel" type="string">
+            <column name="islooktel" length="1" />
+        </property>
+    </class>
+</hibernate-mapping>

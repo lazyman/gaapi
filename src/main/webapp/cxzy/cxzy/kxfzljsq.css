@@ -1,0 +1,113 @@
+BODY {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+TH {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+BODY {
+	MARGIN: 0px
+}
+
+A:link {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+    COLOR: #000000; TEXT-DECORATION: none
+}
+A:hover {
+    COLOR: #dd5800; TEXT-DECORATION: underline
+}
+A:active {
+    COLOR: #dd5800; TEXT-DECORATION: none
+}
+
+#ad01 {
+	BORDER-RIGHT: #43aacc 1px solid; BORDER-TOP: #43aacc 1px solid; MARGIN-TOP: 5px; BORDER-LEFT: #43aacc 1px solid; BORDER-BOTTOM: #43aacc 1px solid
+}
+#ad02 {
+	BORDER-RIGHT: #43aacc 1px solid; BORDER-TOP: #43aacc 1px solid; MARGIN-TOP: 5px; MARGIN-LEFT: 5px; BORDER-LEFT: #43aacc 1px solid; BORDER-BOTTOM: #43aacc 1px solid
+}
+#ad03 {
+	
+}
+#qlwy {
+	BORDER-RIGHT: #000000 1px dashed; PADDING-RIGHT: 5px; BORDER-TOP: #000000 1px dashed; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; VERTICAL-ALIGN: middle; BORDER-LEFT: #000000 1px dashed; WIDTH: 235px; PADDING-TOP: 5px; BORDER-BOTTOM: #000000 1px dashed; HEIGHT: 49px; TEXT-ALIGN: left
+}
+#blogxx {
+	BORDER-RIGHT: #cdd8e9 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cdd8e9 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cdd8e9 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cdd8e9 1px solid; BACKGROUND-COLOR: #edf6f7
+}
+#bloggg {
+	BORDER-RIGHT: #cdd8e9 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cdd8e9 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; BORDER-LEFT: #cdd8e9 1px solid; PADDING-TOP: 3px; BORDER-BOTTOM: #cdd8e9 1px solid; BACKGROUND-COLOR: #edf6f7
+}
+#blogggnr {
+	MARGIN: 3px; VERTICAL-ALIGN: middle; HEIGHT: 35px; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left
+}
+.leftjl {
+	MARGIN-LEFT: 5px
+}
+.topjl {
+	MARGIN-TOP: 2px
+}
+.topjl01 {
+	MARGIN-TOP: 5px
+}
+.ljsq01 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.ljsq01 A {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 20px; TEXT-ALIGN: left
+}
+.ljsqbf {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; TEXT-ALIGN: left
+}
+.ljsqbf A {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; TEXT-ALIGN: left
+}
+.ljsqbf01 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; TEXT-ALIGN: left
+}
+.ljsqbf01 A {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 18px; TEXT-ALIGN: left
+}
+.ljsqww {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 22px; TEXT-ALIGN: left
+}
+.ljsqww A {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 22px; TEXT-ALIGN: left
+}
+.qxlt {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000
+}
+.qxlt A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #000000
+}
+.ljsq02 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 28px; TEXT-ALIGN: left
+}
+.ljsq03 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 24px; TEXT-ALIGN: left
+}
+.ljsq04 {
+	FONT-SIZE: 12px; COLOR: #000000; LINE-HEIGHT: 20px
+}
+.ljsq05 {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+ljsq05 A {
+	FONT-SIZE: 12px; COLOR: #000000
+}
+.retie {
+	PADDING-RIGHT: 5px; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; PADDING-TOP: 5px; TEXT-ALIGN: left
+}
+.ltpic {
+	BORDER-RIGHT: #cccccc 1px solid; PADDING-RIGHT: 3px; BORDER-TOP: #cccccc 1px solid; PADDING-LEFT: 3px; PADDING-BOTTOM: 3px; MARGIN: 3px; BORDER-LEFT: #cccccc 1px solid; WIDTH: 122px; PADDING-TOP: 3px; BORDER-BOTTOM: #cccccc 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.ltdt {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px; COLOR: #43639e
+}
+INPUT.text-dl {
+	FONT-WEIGHT: normal; FONT-SIZE: 12pt; CURSOR: text; COLOR: #000000; BACKGROUND-COLOR: #ffffff; TEXT-ALIGN: left; TEXT-DECORATION: none; FOTN-FAMILY: ËÎÌו,verdana,Arial, Helvetica
+}

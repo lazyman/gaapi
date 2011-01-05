@@ -1,0 +1,17 @@
+document.writeln('<li><a href="../soft/2993.html" target="_blank"><img src="../images/2993.gif">超级兔子</a></li>');
+document.writeln('<li><a href="../soft/2988.html" target="_blank"><img src="../images/2988.gif">Windows优化大师</a></li>');
+document.writeln('<li><a href="../soft/4547.html" target="_blank"><img src="../images/4547.gif">变速精灵</a></li>');
+document.writeln('<li><a href="../soft/8183.html" target="_blank"><img src="../images/8183.gif">DirectX</a></li>');
+document.writeln('<li><a href="../soft/9645.html" target="_blank"><img src="../images/9645.gif">驱动精灵</a></li>');
+document.writeln('<li><a href="../soft/24452.html" target="_blank"><img src="../images/24452.gif">鱼鱼桌面</a></li>');
+document.writeln('<li><a href="../soft/25989.html" target="_blank"><img src="../images/25989.gif">一键GHOST</a></li>');
+document.writeln('<li><a href="../soft/29373.html" target="_blank"><img src="../images/29373.gif">开屏桌面</a></li>');
+document.writeln('<li><a href="../soft/37513.html" target="_blank"><img src="../images/37513.gif">矮人DOS工具箱</a></li>');
+document.writeln('<li><a href="../soft/1190.html" target="_blank"><img src="../images/1190.gif">一键还原精灵</a></li>');
+document.writeln('<li><a href="../soft/6169.html" target="_blank"><img src="../images/6169.gif">完美卸载</a></li>');
+document.writeln('<li><a href="../soft/3943.html" target="_blank"><img src="../images/3943.gif">Cpu-Z</a></li>');
+document.writeln('<li><a href="../soft/3543.html" target="_blank"><img src="../images/3543.gif">Partition Magic</a></li>');
+document.writeln('<li><a href="../soft/6501.html" target="_blank"><img src="../images/6501.gif">EVEREST Ultimate Edition</a></li>');
+document.writeln('<li><a href="../soft/2070.html" target="_blank"><img src="../images/2070.gif">EasyRecovery</a></li>');
+document.writeln('<li><a href="../soft/48970.html" target="_blank"><img src="../images/48970.gif">驱动人生</a></li>');
+document.writeln('<li><a href="../soft/12860.html" target="_blank"><img src="../images/12860.gif">XP变脸王</a></li>');

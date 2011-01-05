@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="IdentifyUserAuthority">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPassWord" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifyUserAuthorityResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifyUserAuthorityResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CredentialSoapHeader" type="tns:CredentialSoapHeader" />
+      <s:complexType name="CredentialSoapHeader">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="UserName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApplicationSN" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="GetUserAppSystems">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetUserAppSystemsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetUserAppSystemsResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesByUserID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserId" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAppID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRolesByUserIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRolesByUserIDResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSignOnToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strUserName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateSignOnTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateSignOnTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifySignOnToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTokenID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IdentifySignOnTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="IdentifySignOnTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSingnOnToken">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strTokenID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteSingnOnTokenResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="DeleteSingnOnTokenResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="IdentifyUserAuthoritySoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifyUserAuthority" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyUserAuthoritySoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifyUserAuthorityResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifyUserAuthorityCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAppSystemsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetUserAppSystems" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAppSystemsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetUserAppSystemsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetUserAppSystemsCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesByUserIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRolesByUserID" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesByUserIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRolesByUserIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRolesByUserIDCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="CreateSignOnTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateSignOnToken" />
+  </wsdl:message>
+  <wsdl:message name="CreateSignOnTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateSignOnTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateSignOnTokenCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="IdentifySignOnTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:IdentifySignOnToken" />
+  </wsdl:message>
+  <wsdl:message name="IdentifySignOnTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:IdentifySignOnTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="IdentifySignOnTokenCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSingnOnTokenSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteSingnOnToken" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSingnOnTokenSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteSingnOnTokenResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteSingnOnTokenCredentialSoapHeader">
+    <wsdl:part name="CredentialSoapHeader" element="tns:CredentialSoapHeader" />
+  </wsdl:message>
+  <wsdl:portType name="SingleSignOnSoap">
+    <wsdl:operation name="IdentifyUserAuthority">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Identify User Authority</wsdl:documentation>
+      <wsdl:input message="tns:IdentifyUserAuthoritySoapIn" />
+      <wsdl:output message="tns:IdentifyUserAuthoritySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAppSystems">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get User AppSystems Can Access</wsdl:documentation>
+      <wsdl:input message="tns:GetUserAppSystemsSoapIn" />
+      <wsdl:output message="tns:GetUserAppSystemsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByUserID">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get Roles By UserID</wsdl:documentation>
+      <wsdl:input message="tns:GetRolesByUserIDSoapIn" />
+      <wsdl:output message="tns:GetRolesByUserIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateSignOnToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Create SignOn Token</wsdl:documentation>
+      <wsdl:input message="tns:CreateSignOnTokenSoapIn" />
+      <wsdl:output message="tns:CreateSignOnTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IdentifySignOnToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Identify SignOn Token</wsdl:documentation>
+      <wsdl:input message="tns:IdentifySignOnTokenSoapIn" />
+      <wsdl:output message="tns:IdentifySignOnTokenSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingnOnToken">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Delete SingnOn Token</wsdl:documentation>
+      <wsdl:input message="tns:DeleteSingnOnTokenSoapIn" />
+      <wsdl:output message="tns:DeleteSingnOnTokenSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SingleSignOnSoap" type="tns:SingleSignOnSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentifyUserAuthority">
+      <soap:operation soapAction="http://tempuri.org/IdentifyUserAuthority" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:IdentifyUserAuthorityCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAppSystems">
+      <soap:operation soapAction="http://tempuri.org/GetUserAppSystems" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetUserAppSystemsCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByUserID">
+      <soap:operation soapAction="http://tempuri.org/GetRolesByUserID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetRolesByUserIDCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSignOnToken">
+      <soap:operation soapAction="http://tempuri.org/CreateSignOnToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:CreateSignOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifySignOnToken">
+      <soap:operation soapAction="http://tempuri.org/IdentifySignOnToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:IdentifySignOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingnOnToken">
+      <soap:operation soapAction="http://tempuri.org/DeleteSingnOnToken" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:DeleteSingnOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SingleSignOnSoap12" type="tns:SingleSignOnSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="IdentifyUserAuthority">
+      <soap12:operation soapAction="http://tempuri.org/IdentifyUserAuthority" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:IdentifyUserAuthorityCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUserAppSystems">
+      <soap12:operation soapAction="http://tempuri.org/GetUserAppSystems" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetUserAppSystemsCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRolesByUserID">
+      <soap12:operation soapAction="http://tempuri.org/GetRolesByUserID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetRolesByUserIDCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateSignOnToken">
+      <soap12:operation soapAction="http://tempuri.org/CreateSignOnToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:CreateSignOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IdentifySignOnToken">
+      <soap12:operation soapAction="http://tempuri.org/IdentifySignOnToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:IdentifySignOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSingnOnToken">
+      <soap12:operation soapAction="http://tempuri.org/DeleteSingnOnToken" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:DeleteSingnOnTokenCredentialSoapHeader" part="CredentialSoapHeader" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SingleSignOn">
+    <wsdl:port name="SingleSignOnSoap" binding="tns:SingleSignOnSoap">
+      <soap:address location="http://10.123.123.125:9000/CommonService/SingleSignOn.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SingleSignOnSoap12" binding="tns:SingleSignOnSoap12">
+      <soap12:address location="http://10.123.123.125:9000/CommonService/SingleSignOn.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.tingoo.gaweb2010.news.News" table="t_news_oa">
+        <id name="newsid" >
+            <column name="newsid"  />
+            <generator class="assigned" />
+        </id>
+        
+        <!--
+	private long newsid;				//新闻编号
+	private String directoryid;			//栏目编号
+	private String subjectsid;			//所属专题编号
+	private String title1;				//新闻标题
+	private String title2;				//副标题
+	private String contents;			//新闻内容
+	private String from;				//新闻来源
+	private String keys;				//关键字
+	private String author;				//新闻作者
+	private String editor;				//责任编辑
+	private String hits;				//点击数
+	private Date filltime;				//添加日期
+	private String userid;				//发布文章用户ID 
+         -->
+        
+        <many-to-one name="directory" class="org.tingoo.gaweb2010.directory.Directory" >
+            <column name="directoryid" />
+        </many-to-one>
+        <property name="subjectsid" type="string">
+            <column name="subjectsid"  />
+        </property>
+        <property name="title1" type="string">
+            <column name="newstitle1"  />
+        </property>
+        <property name="title2" type="string">
+            <column name="newstitle2" />
+        </property>
+        <property name="contents" type="clob">
+            <column name="contents"  />
+        </property>
+        <property name="from" type="string">
+            <column name="newsfrom" />
+        </property>
+        <property name="keys" type="string">
+            <column name="newskeys" />
+        </property>
+        <property name="author" type="string">
+            <column name="newsauthor" />
+        </property>
+        <property name="editor" type="string">
+            <column name="newseditor" />
+        </property>
+        <property name="hits" >
+            <column name="hits" />
+        </property>
+        <property name="filltime" type="timestamp">
+            <column name="filltime"  />
+        </property>
+        <property name="picurl">
+            <column name="picurl"  />
+        </property>
+        <property name="newstype">
+            <column name="newstype"  />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0040)http://www.fxdaima.com/ -->
+<HTML xml:lang="zh-cn" xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<TITLE>调用更灵活flash幻灯片代码 - 福星代码</TITLE>
+<META content="text/html; charset=GB2312" http-equiv=Content-Type>
+<LINK rel=stylesheet type=text/css href="http://www.fxdaima.com/hbcms/template/image/fxdaima_80/main_css.css">
+<script src="http://www.fxdaima.com/hbcms/script/category_0.js"></script>
+<script src="http://www.fxdaima.com/hbcms/script/category_90000.js"></script>
+<META name=GENERATOR content="MSHTML 8.00.6001.18702"></HEAD>
+<BODY style="text-align:center">
+<DIV class=wrap style="margin-left:auto; margin-right: auto;">
+<!--页头-->
+<DIV class=head>
+<DIV class=logo><script>my_tag("web_logo",1);</script></DIV>
+<DIV class=banner><script>my_tag("top_text",1);</script></DIV>
+</DIV>
+
+<DIV class=search><!--当前路径-->
+
+<DIV style="CLEAR: both"></DIV></DIV>
+<!--正文-->
+<DIV class=main>
+<DIV style="height:30px;"></DIV>
+<script type=text/javascript>
+var pic_width=318; //图片宽度
+var pic_height=252; //图片高度
+var button_pos=4; //按扭位置 1左 2右 3上 4下
+var stop_time=3000; //图片停留时间(1000为1秒钟)
+var show_text=1; //是否显示文字标签 1显示 0不显示
+var txtcolor="000000"; //文字色
+var bgcolor="DDDDDD"; //背景色
+var imag=new Array();
+var link=new Array();
+var text=new Array();
+imag[1]="images/01.jpg";
+link[1]="http://www.fxdaima.com/";
+text[1]="福星代码站";
+imag[2]="images/02.jpg";
+link[2]="http://www.fxdaima.com/";
+text[2]="福星代码站";
+imag[3]="images/03.jpg";
+link[3]="http://www.fxdaima.com/";
+text[3]="福星代码站";
+imag[4]="images/04.jpg";
+link[4]="http://www.fxdaima.com/";
+text[4]="福星代码站";
+//可编辑内容结束
+var swf_height=show_text==1?pic_height+20:pic_height;
+var pics="", links="", texts="";
+for(var i=1; i<imag.length; i++){
+	pics=pics+("|"+imag[i]);
+	links=links+("|"+link[i]);
+	texts=texts+("|"+text[i]);
+}
+pics=pics.substring(1);
+links=links.substring(1);
+texts=texts.substring(1);
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cabversion=6,0,0,0" width="'+ pic_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="flash/focus.swf">');
+document.write('<param name="quality" value="high"><param name="wmode" value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'">');
+document.write('<embed src="flash/focus.swf" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'" quality="high" width="'+ pic_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+
+<table width="100%" height="100" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top" height="300"><br>
+    <br>
+    <table width="63%" height="108" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td height="32" align="center"><strong>调用更灵活flash幻灯片代码</strong></td>
+      </tr>
+      <tr>
+        <td height="32" align="center">代码整理：<a href="http://www.fxdaima.com/" target="_blank">福星代码站</a></td>
+      </tr>
+      <tr>
+        <td height="32" align="center">＊尊重他人劳动成果，转载请自觉注明出处！</td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+<DIV style="height:30px;"></DIV>
+
+    </DIV>
+      
+<!--页尾-->
+<DIV class=foot><script>my_tag("copyright",1);</script></DIV>
+</DIV>
+</body>
+</html>

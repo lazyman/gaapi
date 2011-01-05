@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="org.tingoo.gaapi.bean.GroupContact" table="group_contact_" schema="dbo" catalog="gaapi">
+        <id name="id" type="int">
+            <column name="id_" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="member" class="org.tingoo.gaapi.bean.Member" fetch="select">
+            <column name="user_" length="50" />
+        </many-to-one>
+        <many-to-one name="group" class="org.tingoo.gaapi.bean.Group" fetch="select">
+            <column name="group_" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name_" length="50" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile_" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

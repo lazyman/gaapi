@@ -1,0 +1,3 @@
+//Õ∑≤ø”“≤‡
+document.writeln('<a href="http://un.5i.com/5ilt/lt.html?id=158" target="_blank"><img src="../tuijianimg/5i_120x60.gif"></a>');
+//document.writeln('<OBJECT classid=clsid:D27CDB6E-AE6D-11cf-96B8-444553540000 codebase=http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=5,0,0,0 WIDTH=120 HEIGHT=60> <PARAM NAME=movie VALUE=../tuijianimg/qy_120x60.swf> <PARAM NAME=quality VALUE=high> <EMBED src=../tuijianimg/qy_120x60.swf quality=high pluginspage=http://www.macromedia.com/shockwave/download/index.cgi?P1_Prod_Version=ShockwaveFlash type=application/x-shockwave-flash width=120 height=60></EMBED></OBJECT>');

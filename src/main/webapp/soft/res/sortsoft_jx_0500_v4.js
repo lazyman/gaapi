@@ -1,0 +1,13 @@
+document.writeln('<li><a href="../soft/37757.html" target="_blank"><img src="../images/2426.gif">Photoshop</a></li>');
+document.writeln('<li><a href="../soft/2491.html" target="_blank"><img src="../images/2491.gif">Macromedia Flash</a></li>');
+document.writeln('<li><a href="../soft/5671.html" target="_blank"><img src="../images/5671.gif">Adobe Flash Player</a></li>');
+document.writeln('<li><a href="../soft/6621.html" target="_blank"><img src="../images/6621.gif">ACDSee</a></li>');
+document.writeln('<li><a href="../soft/26063.html" target="_blank"><img src="../images/26063.gif">光影魔术手</a></li>');
+document.writeln('<li><a href="../soft/15796.html" target="_blank"><img src="../images/15796.gif">彩影</a></li>');
+document.writeln('<li><a href="../soft/2441.html" target="_blank"><img src="../images/2441.gif">Ulead GIF Animator</a></li>');
+document.writeln('<li><a href="../soft/2269.html" target="_blank"><img src="../images/2269.gif">HyperSnap-DX</a></li>');
+document.writeln('<li><a href="../soft/16808.html" target="_blank"><img src="../images/16808.gif">大头贴制作系统</a></li>');
+document.writeln('<li><a href="../soft/48081.html" target="_blank"><img src="../images/48081.gif">iSee图片专家</a></li>');
+document.writeln('<li><a href="../soft/2290.html" target="_blank"><img src="../images/2290.gif">SnagIt</a></li>');
+document.writeln('<li><a href="../soft/48836.html" target="_blank"><img src="../images/48836.gif">美图秀秀</a></li>');
+document.writeln('<li><a href="../soft/50415.html" target="_blank"><img src="../images/50415.gif">可牛影像</a></li>');

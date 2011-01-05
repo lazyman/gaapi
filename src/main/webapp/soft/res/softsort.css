@@ -1,0 +1,24 @@
+#crumbs {
+	LINE-HEIGHT: 36px; FONT-FAMILY: simsun
+}
+#clsBest UL {
+	OVERFLOW: hidden; ZOOM: 1
+}
+#clsBest LI {
+	FLOAT: left; OVERFLOW: hidden; WIDTH: 180px; WHITE-SPACE: nowrap
+}
+#clsBest LI IMG {
+	MARGIN: 2px 5px 2px 0px; VERTICAL-ALIGN: middle; WIDTH: 20px; HEIGHT: 20px
+}
+.cyword {
+	FONT-SIZE: 14px; COLOR: #000000; LINE-HEIGHT: 18px
+}
+A.cyword:link {
+	CURSOR: pointer; COLOR: #000; TEXT-DECORATION: none
+}
+A.cyword:visited {
+	COLOR: #000
+}
+A.cyword:hover {
+	COLOR: #000; TEXT-DECORATION: underline
+}

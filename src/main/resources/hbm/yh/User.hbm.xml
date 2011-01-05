@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.tingoo.gaweb2010.user">
+	<class name="User" table="users">
+		<id name="id" column="ID">
+			<generator class="assigned" />
+		</id>
+		
+		<property name="username" column="UserName" />
+		<property name="password" column="Password" />
+		<property name="truename" column="TrueName" />
+		<property name="jobTitleId" column="JobTitleID" />
+		<property name="homeTel" column="HomeTel" />
+		<property name="workTel" column="WorkTel" />
+		<property name="mobile" column="mobile" />
+		<property name="shortNo" column="shortNo" />
+		<property name="pager" column="pager" />
+		<property name="callNo" column="callNo" />
+		<property name="deptId" column="DepartmentID" />
+		<property name="isManager" column="isManager" />
+		<property name="address" column="address" />
+		<property name="email" column="email" />
+		<property name="logintimes" column="logintimes" />
+		<property name="createTime" column="CreateDateTime" />
+		<property name="loginTime" column="LastLoginDateTime" />
+		<property name="orderNo" column="orderNo" />
+		<property name="levelNo" column="levelNo" />
+		<property name="authorId" column="CreateUsrID" />
+		<property name="policeId" column="policeId" />
+		<property name="policeIp" column="policeIp" />
+		<property name="proPolice" column="proPolice" />
+		<property name="proMiddle" column="proMiddle" />
+		<property name="usrProTimeCard" column="usrProTimeCard" />
+		
+	</class>
+</hibernate-mapping>

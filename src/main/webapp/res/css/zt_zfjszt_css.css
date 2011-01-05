@@ -1,0 +1,63 @@
+/* CSS Document */
+
+body{margin:0px; font-size:12px; text-decoration:none;}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FF6600;
+}
+a:active {
+	text-decoration: none;
+	color: #FF6600;
+}
+
+.titlefont12{font-size:12px;color:#ffffff;font-weight:bold;	text-decoration: none;}
+.titlefont12 a:link{font-size:12px;color:#ffffff;font-weight:bold;	text-decoration: none;}
+.titlefont12 a:visited{font-size:12px;color:#ffffff;font-weight:bold;	text-decoration: none;}
+.titlefont12 a:hover{font-size:12px;color:#ffffff;font-weight:bold;	text-decoration: underline;}
+.titlefont12 a:active{font-size:12px;color:#ffffff;font-weight:bold;	text-decoration: none;}
+
+.font12 {font-size:12px;color:#ffffff;line-height:24px;text-decoration: none;}
+.font12 a:link{font-size:12px;color:#ffffff;line-height:24px;text-decoration: none;}
+.font12 a:visited{font-size:12px;color:#ffffff;line-height:24px;text-decoration: none;}
+.font12 a:hover{font-size:12px;color:#ffffff;line-height:24px;text-decoration: underline;}
+.font12 a:active{font-size:12px;color:#ffffff;line-height:24px;text-decoration: none;}
+
+.font13 {font-size:12px;color:#FF0000;line-height:24px;text-decoration: none;}
+
+
+
+.bk{ border:1 solid #D9D9D9;}
+.font12black{font-size:12px;color:#000000;line-height:24px;	text-decoration: none;}
+.font12black a:link{font-size:12px;color:#000000;line-height:24px;	text-decoration: none;}
+.font12black a:visited{font-size:12px;color:#000000;line-height:24px;	text-decoration: none;}
+.font12black a:hover{font-size:12px;color:#FF6600;line-height:24px;	text-decoration: underline;}
+.font12black a:active{font-size:12px;color:#FF6600;line-height:24px;	text-decoration: none;}
+
+
+.font12black2{font-size:12px;color:#CC0000;line-height:24px;font-weight:bold;text-decoration: none;}
+.font12black2 a:link{font-size:12px;color:#CC0000;line-height:24px;font-weight:bold;text-decoration: none;}
+.font12black2 a:visited{font-size:12px;color:#CC0000;line-height:24px;font-weight:bold;text-decoration: none;}
+.font12black2 a:hover{font-size:12px;color:#CC0000;line-height:24px;font-weight:bold;text-decoration: underline;}
+.font12black2 a:active{font-size:12px;color:#CC0000;line-height:24px;font-weight:bold;text-decoration: none;}
+
+.titlelarger {font-size: 18px;	line-height: 30px;	font-weight: bold;	color: #000000;}
+.titlelarger a:link{font-size: 18px;	line-height: 30px;	font-weight: bold;	color: #000000;}
+.titlelarger a:visited{font-size: 18px;	line-height: 30px;	font-weight: bold;	color: #000000;}
+.titlelarger a:hover{font-size: 18px;	line-height: 30px;	font-weight: bold;	color: #000000;}
+.titlelarger a:active{font-size: 18px;	line-height: 30px;	font-weight: bold;	color: #000000;}
+
+.font14black2{	font-size:14px;	color:#000000;	line-height:26px;	text-decoration: none;}
+.font14black2 a:link{	font-size:14px;	color:#000000;	line-height:26px;	text-decoration: none;}
+.font14black2 a:visited{	font-size:14px;	color:#000000;	line-height:26px;	text-decoration: none;}
+.font14black2 a:hover{	font-size:14px;	color:#000000;	line-height:26px;	text-decoration: underline;}
+.font14black2 a:active{	font-size:14px;	color:#000000;	line-height:26px;	text-decoration: none;}
+
+.font16 {font-size:18px;	color:#000000;	line-height:26px;	text-decoration: none; font-weight: bold;}

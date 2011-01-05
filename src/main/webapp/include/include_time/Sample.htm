@@ -1,0 +1,32 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>Calendar Sample</title>
+<script language="JavaScript">
+<!--
+function fPopUpCalendarDlg(ctrlobj)
+{
+	showx = event.screenX - event.offsetX;
+	showy = event.screenY - event.offsetY + 18;
+	newWINwidth =18;
+
+	retval = window.showModalDialog("calendardlg.htm", "", "dialogWidth:196px; dialogHeight:190px; dialogLeft:"+showx+"px; dialogTop:"+showy+"px; status:no; directories:yes;scrollbars:no;Resizable=no; "  );
+	if( retval != null ){
+		ctrlobj.value = retval;
+	}
+}
+
+</script>
+
+</HEAD>
+<body>
+<table width="80%" border="1" align="center"  cellpadding="1" cellspacing="0" bordercolordark="#FFFFFF" bordercolorlight="#000000">
+    <tr>
+    <td nowrap align="right">时间：</td>
+    <td>
+      <input name="aDate" maxlength="12"  size=12 class="input_text" readonly>&nbsp;<IMG style="CUrs1OR: hand" onclick="fPopUpCalendarDlg(aDate);return false" alt=弹出日历下拉菜单 src="images/calendar.gif" align=absMiddle width="18" height="16">
+    </td>
+    </tr>
+</table>
+</body>
+</HTML>

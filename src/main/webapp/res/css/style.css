@@ -1,0 +1,26 @@
+A {TEXT-DECORATION: none}
+A:active {color: #000000; TEXT-DECORATION: none}
+A:visited {COLOR: #000000; TEXT-DECORATION: none}
+A:hover {COLOR: #000000; TEXT-DECORATION: underline}
+A:link {COLOR: #000000; TEXT-DECORATION: none}
+
+body {font-family: tahoma; font-size: 12px; FONT-SIZE: 9pt;COLOR: #333333;margin-top:0px;margin-left:0px;margin-right:0px;margin-bottom:0px;background-color:#ffffff;background-image:url(../../img/bg.jpg);background-repeat:repeat-x;background-position:left top;
+}
+
+td {font-family:"tahoma","arial","ËÎÌו" ; font-size: 11px; TEXT-DECORATION: none;color: #000000;}
+
+.symbol {
+	Z-INDEX: 20; BACKGROUND: none transparent scroll repeat 0% 0%; MARGIN: 0px 0px 0px 156px; POSITION: absolute; TOP: 20px
+}
+
+.news {background-image:url(../../img/bg4.jpg);background-repeat:no-repeat;background-position:left top}
+
+.RightBar_Box
+{
+    background-color:#FEFFF0;    
+    border-color:Gray;
+    border-style:solid;
+    border-width:1px;
+    width:25px;
+    height:18px;
+}

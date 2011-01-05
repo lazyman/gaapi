@@ -1,0 +1,103 @@
+body,td{
+	FONT-SIZE: 12px;
+	margin: 0px;
+	line-height: 16px;
+}
+.RightBar_Box
+{
+    background-color:#FEFFF0;    
+    border-color:Gray;
+    border-style:solid;
+    border-width:1px;
+    width:25px;
+    height:18px;
+}
+.text {
+line-height: 22px;
+}
+A.redmenu:link {
+	COLOR: #FC5102;
+	TEXT-DECORATION: none;
+}
+A.redmenu:visited {
+	COLOR: #FC5102;
+	TEXT-DECORATION: none;
+}
+A.redmenu:hover {
+	COLOR: #FC5102;
+	TEXT-DECORATION: none;
+}
+A.whitemenu:link {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+A.whitemenu:visited {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+}
+A.whitemenu:hover {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+
+}
+
+A.menu:link {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A.menu:visited {
+	COLOR: #ffffff;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A.menu:hover {
+	COLOR: #ffffff;
+	;
+	TEXT-DECORATION: none;
+	font-weight: bold;
+}
+A:link {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+A:active {
+	COLOR: #D32943
+}
+A:hover {
+	COLOR: #FF9700;TEXT-DECORATION: underline;
+}
+.title {
+	font-weight: bold;
+	font-size: 12px;
+	color: #ffffff;
+}
+.red2 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FF5D00;
+}
+.red1 {
+	font-size: 12px;
+
+	color: #BB060B;
+}
+
+.white {
+	font-size: 12px;
+	color: #ffffff;
+}
+
+.tab {
+	border: 1px solid 4180C6;
+    FONT-SIZE: 12px
+}
+.input01 {
+	BORDER-RIGHT: #bdbabd 1px solid;
+	BORDER-TOP: #bdbabd 1px solid;
+	BORDER-LEFT: #bdbabd 1px solid;
+	BORDER-BOTTOM: #bdbabd 1px solid;
+	background-color: F9F8F4;
+}

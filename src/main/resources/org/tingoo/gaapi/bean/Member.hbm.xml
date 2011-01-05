@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-12-28 15:27:58 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="org.tingoo.gaapi.bean.Member" table="member_" schema="dbo" catalog="gaapi">
+        <id name="id" type="string">
+            <column name="id_" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="username" type="string">
+            <column name="username_" length="50" />
+        </property>
+        <property name="password" type="string">
+            <column name="password_" length="80" />
+        </property>
+        <property name="isapproved" type="string">
+            <column name="isapproved_" length="1" />
+        </property>
+        <property name="islockedout" type="string">
+            <column name="islockedout_" length="1" />
+        </property>
+        <property name="createdate" type="string">
+            <column name="createdate_" length="30" />
+        </property>
+        <property name="orderindex" type="java.lang.Integer">
+            <column name="orderindex_" />
+        </property>
+        <property name="policeid" type="string">
+            <column name="policeid_" length="50" />
+        </property>
+        <property name="membername" type="string">
+            <column name="membername_" length="50" />
+        </property>
+        <property name="sex" type="string">
+            <column name="sex_" length="1" />
+        </property>
+        <property name="duty" type="string">
+            <column name="duty_" length="20" />
+        </property>
+        <property name="birthday" type="string">
+            <column name="birthday_" length="30" />
+        </property>
+        <property name="ismarry" type="string">
+            <column name="ismarry_" length="1" />
+        </property>
+        <property name="shortmobile" type="string">
+            <column name="shortmobile_" length="10" />
+        </property>
+        <property name="mobile" type="string">
+            <column name="mobile_" length="20" />
+        </property>
+        <property name="officephone" type="string">
+            <column name="officephone_" length="20" />
+        </property>
+        <property name="type" type="string">
+            <column name="type_" length="1" />
+        </property>
+        <property name="state" type="string">
+            <column name="state_" length="1" />
+        </property>
+        <property name="startworkdate" type="string">
+            <column name="startworkdate_" length="30" />
+        </property>
+        <property name="createtime" type="string">
+            <column name="createtime_" length="30" />
+        </property>
+        <property name="modifytime" type="string">
+            <column name="modifytime_" length="30" />
+        </property>
+        <property name="innerofficephone" type="string">
+            <column name="innerofficephone_" length="10" />
+        </property>
+        <set name="groups" inverse="true" lazy="true" table="group_" fetch="select">
+            <key>
+                <column name="owner_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.Group" />
+        </set>
+        <set name="faultsForPostman" inverse="true" lazy="true" table="fault_" fetch="select">
+            <key>
+                <column name="postman_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.Fault" />
+        </set>
+        <set name="processes" inverse="true" lazy="true" table="process_" fetch="select">
+            <key>
+                <column name="opman_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.Process" />
+        </set>
+        <set name="users" inverse="true" lazy="true" table="user_" fetch="select">
+            <key>
+                <column name="member_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.User" />
+        </set>
+        <set name="groupContacts" inverse="true" lazy="true" table="group_contact_" fetch="select">
+            <key>
+                <column name="user_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.GroupContact" />
+        </set>
+        <set name="faultsForOpman" inverse="true" lazy="true" table="fault_" fetch="select">
+            <key>
+                <column name="opman_" length="50" />
+            </key>
+            <one-to-many class="org.tingoo.gaapi.bean.Fault" />
+        </set>
+    </class>
+</hibernate-mapping>

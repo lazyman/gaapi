@@ -1,0 +1,23 @@
+<HTML><HEAD><TITLE>日历</TITLE>
+<META content="text/html; charset=GBK" http-equiv=Content-Type>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR></HEAD>
+<BODY bgColor="#B9C3E1" onload=fload()>
+<SCRIPT language="javascript" src="calendar.js"></SCRIPT>
+
+<SCRIPT language="javascript">
+function fload()
+{
+	fPopCalendar(document.all.txt1, document.all.txt1);
+}
+
+function fkeydown()
+{
+	if(event.keyCode==27){
+		event.returnValue = null;
+		window.returnValue = null;
+		window.close();
+	}
+}
+document.onkeydown=fkeydown;
+</SCRIPT>
+<INPUT id=txt1 style="DISPLAY: none"> </BODY></HTML>

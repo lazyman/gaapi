@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="cn.com.lazyhome.ga.duty">
+	<class name="WatchType" table="t_watchtype">
+		<id name="id">
+			<column name="id" />
+			<generator class="assigned" />
+		</id>
+		
+		<property name="typename" ></property>
+		<property name="pid" ></property>
+		<property name="sort" ></property>
+		<property name="remark" ></property>
+	</class>
+</hibernate-mapping>

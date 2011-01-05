@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+        <property name="hibernate.connection.password">yesab@?0227</property>
+        <property name="hibernate.connection.url">jdbc:jtds:sqlserver://10.123.36.29:1433/gaweb</property>
+        <property name="hibernate.connection.username">yhweb</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <!-- property name="current_session_context_class">org.hibernate.context.ManagedSessionContext</property -->
+        <property name="show_sql">true</property>
+		
+		<mapping resource="hbm/yh/User.hbm.xml" />
+        <mapping resource="hbm/yh/Contact.hbm.xml" />
+        <mapping resource="hbm/yh/Group.hbm.xml" />
+    </session-factory>
+    
+</hibernate-configuration>

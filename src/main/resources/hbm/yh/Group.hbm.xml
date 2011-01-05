@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.tingoo.gaweb2010.group">
+	<class name="Group" table="group_">
+		<id name="id" column="id_">
+			<generator class="guid" />
+		</id>
+		
+		<property name="name" column="name_" />
+		<property name="remark" column="remark_" />
+	</class>
+</hibernate-mapping>

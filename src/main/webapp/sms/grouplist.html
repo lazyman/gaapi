@@ -1,0 +1,126 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>
+
+</title>
+<script type="text/javascript" src="../res/js/prototype.js"></script>
+
+</head>
+<body>
+    <form name="form1" method="post" action="../contact/group.jsp" id="form1">
+	<input type="hidden" name="act" id="act" />
+
+<script type="text/javascript">
+<!--
+function add() {
+	${"act"}.value = "add";
+	alert("add");
+}
+function modify() {
+	${"act"}.value = "modify";
+	alert("modify");
+}
+function del() {
+	${"act"}.value = "del";
+	alert("del");
+}
+function send() {
+	${"act"}.value = "send";
+	alert("send");
+}
+// -->
+</script>
+
+
+        <table cellspacing="0" cellpadding="0" width="100%" border="0" align="center">
+            <tr>
+                <td width="5">
+                </td>
+                <td align="center">
+                    <table id="Table1" cellspacing="0" cellpadding="0" border="0">
+                        <tr>
+                            <td height="5">
+                            </td>
+                        </tr>
+                    </table>
+                    <table id="Table6" cellspacing="0" cellpadding="0" width="100%" align="center" border="0">
+                        <tr>
+                            <td width="100%" height="39">
+                                <table id="Table4" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                    <tr>
+                                        <td width="1%">
+                                        </td>
+                                        <td width="3%">
+                                            <div align="center">
+                                                <img height="30" src="images/icon1.jpg" width="32" /></div>
+                                        </td>
+                                        <td style="text-align: left" background="images/bg1.jpg">
+                                            &nbsp;<span id="lblinfo" class="font3">自定义分组－通讯录</span></td>
+                                        <td width="1%">
+                                        </td>
+                                        <td width="70">
+                                            <input type="image" name="ibtinsert" id="ibtinsert" src="images/tj.gif" border="0" onclick="add();" /></td>
+                                        <td width="70">
+                                            <input type="image" name="ibtedit" id="ibtedit" src="images/xg.gif" border="0" onclick="modify();" /></td>
+                                        <td width="70">
+                                            <input type="image" name="ibtdelete" id="ibtdelete" src="images/sc.gif" border="0" onclick="javascript:del();" language="javascript" /></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td valign="top">
+                                <table id="table10" cellspacing="0" cellpadding="0" width="100%" border="0">
+                                    <tr>
+                                        <td align="right">&nbsp;
+                                            </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <div style="overflow-y: scroll; height: 390px;">
+                                                <table class="css" cellspacing="1" cellpadding="1" rules="all" align="center" border="0" bgcolor="#D1E6F9" bordercolor="#D1E6F9" id="dg_GroupList" style="border-color:#D1E6F9;border-width:1px;border-style:None;width:98%;">
+	<tr align="center" style="color:#FD7400;background-color:#F7FBFF;font-weight:bold;height:22px;">
+		<td width="50" style="width:50px;">选择</td><td width="50" style="width:50px;">序号</td><td width="199">分组名称</td>
+		<td width="403">描述</td>
+	</tr><tr align="center" style="color:#3C3C3C;background-color:White;border-color:#F7FBFF;height:20px;">
+		<td>
+                                                                <input id="dg_GroupList__ctl3_chkselect" type="checkbox" name="dg_GroupList:_ctl3:chkselect" />                                                    </td><td>
+                                                                1
+                                                            </td><td><a href="../GroupPersonList.aspx?GroupID=719">本科人员</a></td>
+                                                            <td>本科人员</td>
+	</tr><tr class="alter" align="center" style="color:#3C3C3C;background-color:#F7FBFF;border-color:#F7FBFF;height:20px;">
+		<td>
+                                                                <input id="dg_GroupList__ctl4_chkselect" type="checkbox" name="dg_GroupList:_ctl4:chkselect" />                                                    </td><td>
+                                                                2
+                                                            </td><td><a href="../GroupPersonList.aspx?GroupID=39117">d</a></td>
+                                                            <td>&nbsp;</td>
+	</tr>
+</table>
+											<div><textarea cols="60" rows="8"></textarea> <br />
+											<input type="submit" value="send" onclick="send();" />
+											</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td height="8" style="width: 513px">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" style="width: 513px">
+                                            <font color="red"><span id="showmsg"></span></font>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    
+<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwKZiq2/DwK//teACAKRh+W4AQLn/KeRCALY3tnKBAKFhd6mCAKFhdrMCBQYX1NAJc32R+V/ow81VT5DE2Yd" /></form>
+</body>
+</html>

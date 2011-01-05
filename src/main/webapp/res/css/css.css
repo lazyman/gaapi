@@ -1,0 +1,98 @@
+body,td,th {font-size: 12px;margin:0px;color:#333333; }
+body{ background-image: url(../images/bj.jpg);}
+a:link {
+	color: #333333;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: underline;
+	color: #FF6600;
+}
+a:active {
+	text-decoration: none;
+	color: #FF6600;
+}
+
+
+
+.font1 a:link{font-size:12px; color:#FFFFFF; text-decoration:none; font-weight: bold;}
+.font1 a:hover{font-size:12px; color:#FFFFFF;text-decoration: none; font-weight: bold;}
+.font1 a:visited{font-size:12px; color:#FFFFFF;text-decoration:none; font-weight: bold;}
+.font1 a:active{font-size:12px; color:#FFFFFF;text-decoration:none; font-weight: bold;}
+
+.font3 a:link{font-size:12px; color:#00407C; text-decoration:none;}
+.font3 a:hover{font-size:12px; color:#00407C;text-decoration: none;}
+.font3 a:visited{font-size:12px; color:#00407C;text-decoration:none; }
+.font3 a:active{font-size:12px; color:#00407C;text-decoration:none;}
+
+.style1{font-size:12px; color:#ffffff; font-weight: bold;}
+.style2{font-size:12px; color:#FFffff;}
+.style2 a:link{font-size:12px; color:#FFffff;}
+.style2 a:hover{font-size:12px; color:#FFffff;}
+.style2 a:visited{font-size:12px; color:#FFffff;}
+.style2 a:active{font-size:12px; color:#FFffff;}
+
+
+
+.style21{font-size:12px; color:#00407c;}
+.style3{font-size:12px;color:#383838;border: 1px solid #999999;}
+.style4{
+	font-size:32px;
+	color:#00407c;
+	font-weight: bolder;
+	line-height: 64px;
+	font-family: "黑体";
+	font-variant: normal;
+}
+
+
+.style5{font-size:14px; color:#DB2424; font-weight: bold;}
+.style6{font-size:14px; color:#464645; LINE-HEIGHT: 26px;}
+
+.left_bk {FONT-SIZE: 12px;border: 1px solid #A8CBF5;}
+.left_bk1 {FONT-SIZE: 12px;border: 1px solid #d1d1d1;}
+
+
+.RightBar_Box
+{
+    background-color:#FEFFF0;    
+    border-color:Gray;
+    border-style:solid;
+    border-width:1px;
+    width:25px;
+    height:18px;
+}
+
+
+.PagerBtn:link
+{   
+    color:Black;
+    font-family: "宋体";
+	font-size: 12px;	
+}
+
+.PagerBtn:visited
+{   
+    color: Black;
+    font-family: "宋体";
+	font-size: 12px;
+}
+
+.PagerBtn:hover
+{   
+    color: Black;
+    font-family: "宋体";
+	font-size: 12px;
+}
+
+.PagerBtn:active
+{   
+    color: Black;
+    font-family: "宋体";
+	font-size: 12px;
+}
+

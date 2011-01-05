@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.tingoo.gaweb2010.contact">
+	<class name="Contact" table="contact_">
+		<id name="id" column="id_">
+			<generator class="guid" />
+		</id>
+		
+		<property name="name">
+			<column name="name_"></column>
+		</property>
+		<property name="tel">
+			<column name="tel_"></column>
+		</property>
+		<property name="remark">
+			<column name="remark_"></column>
+		</property>
+		
+		<many-to-one name="group" class="org.tingoo.gaweb2010.group.Group">
+			<column name="gid_"></column>
+		</many-to-one>
+	</class>
+</hibernate-mapping>

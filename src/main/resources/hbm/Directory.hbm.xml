@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="org.tingoo.gaweb2010.directory.Directory" table="t_directory" >
+        <id name="dirid" type="string">
+            <column name="directoryid"  />
+            <generator class="assigned" />
+        </id>
+        
+        <many-to-one name="parent" class="org.tingoo.gaweb2010.directory.Directory" >
+            <column name="parentid" />
+        </many-to-one>
+        <property name="dirnamechs" type="string">
+            <column name="dirnamechs"  />
+        </property>
+        <property name="dirnameeng" type="string">
+            <column name="dirnameeng"  />
+        </property>
+        <property name="depth" type="integer">
+            <column name="depth" not-null="false" />
+        </property>
+        <property name="isshow">
+            <column name="isshow"  />
+        </property>
+        <property name="dirsort" type="integer">
+            <column name="dirsort" />
+        </property>
+        
+        <bag name="newses" order-by="filltime desc" >
+        	<key column="directoryid"></key>
+        	<one-to-many class="org.tingoo.gaweb2010.news.News" />
+        </bag>
+    </class>
+</hibernate-mapping>

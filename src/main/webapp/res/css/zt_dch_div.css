@@ -1,0 +1,40 @@
+/* 栏目主框架 */
+.lanmu_frame {
+	width: 790px;
+}
+.lanmu_div {
+	border: 1px solid #0099FF;
+	width: 48%;
+	margin: 3px;
+	float:left;
+	height: 260px;
+	font-size: 12px;
+}
+.lanmu_title_div {
+	width: 100%;
+	background-image:url(../images/bbg_bak.png);
+	height: 23px;
+	padding-top: 5px;
+}
+.lanmu_title_div .lanmu_biaoti_div {
+	float: left;
+	margin-left: 15px;
+	font-weight: bold;
+}
+.lanmu_title_div .lanmubiaoti_more_div {
+	float: right;
+	margin-right: 5px;
+}
+.lanmu_contant_div {
+	height:230px;
+}
+
+/* 单行栏目 */
+.lanmu_div_single {
+	border: 1px solid #0099FF;
+	width: 97%;
+	margin: 3px;
+	float: left;
+	height: 260px;
+	font-size: 12px;
+}

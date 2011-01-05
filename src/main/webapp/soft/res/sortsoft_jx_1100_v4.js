@@ -1,0 +1,10 @@
+document.writeln('<li><a href="../soft/1604.html" target="_blank"><img src="../images/1604.gif">五笔打字员</a></li>');
+document.writeln('<li><a href="../soft/13675.html" target="_blank"><img src="../images/13675.gif">宝宝爱儿歌</a></li>');
+document.writeln('<li><a href="../soft/7745.html" target="_blank"><img src="../images/7745.gif">英语小精灵</a></li>');
+document.writeln('<li><a href="../soft/8079.html" target="_blank"><img src="../images/8079.gif">汉语大辞典</a></li>');
+document.writeln('<li><a href="../soft/7063.html" target="_blank"><img src="../images/7063.gif">英语八哥</a></li>');
+document.writeln('<li><a href="../soft/5792.html" target="_blank"><img src="../images/5792.gif">学生评语管理</a></li>');
+document.writeln('<li><a href="../soft/11684.html" target="_blank"><img src="../images/11684.gif">金山打字通</a></li>');
+document.writeln('<li><a href="../soft/14129.html" target="_blank"><img src="../images/14129.gif">少儿速算练习机</a></li>');
+document.writeln('<li><a href="../soft/23235.html" target="_blank"><img src="../images/23235.gif">Google Earth(谷歌地球)</a></li>');
+document.writeln('<li><a href="../soft/8311.html" target="_blank"><img src="../images/8311.gif">公务员考试指南针</a></li>');

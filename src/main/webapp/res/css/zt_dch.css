@@ -1,0 +1,54 @@
+.lanmubiaoti {
+	padding-left: 30px;
+	font-weight: bold;
+	width: 85%
+}
+.lanmutable {
+	border: 1px solid #0099FF;
+}
+.lanmumore {
+	text-align:center;
+}
+
+#menu1 {
+	position: absolute;
+	left:190px;
+	top:260px;
+	height:40;
+	width:100px;
+	z-index:1;
+	background-color:#DDDDDD;
+}
+.menuitem .menuitemSel {
+	padding:5px;
+}
+.menuitemSel {
+	background-color:#666666;
+}
+.catlist {
+	list-style-image:url(../res/images/s.jpg);
+	padding-left: 30px;
+	background-image:url(../res/images/lina.jpg);
+}
+
+#subcat {
+	display: ;
+	position: absolute;
+	left: 100px;
+	top: 50px;
+	width: 100px;
+	margin-left: -5px;
+	margin-top: -2px;
+	background-color:#CCFFFF;
+	padding-top: 5px;
+}
+#subcat li {
+	padding-left: 10px;
+	height: 20px;
+}
+#subcat li a:linked, #subcat li a:visited {
+	background-image: url(../images/index_left_price_boxBG.gif);
+}
+#subcat li a:linked {
+	background-color:#33FFFF;
+}
