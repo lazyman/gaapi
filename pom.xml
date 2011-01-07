@@ -71,5 +71,12 @@
     	<artifactId>axis-jaxrpc</artifactId>
     	<version>1.4</version>
     </dependency>
+    <dependency>
+    	<groupId>commons-discovery</groupId>
+    	<artifactId>commons-discovery</artifactId>
+    	<version>0.2</version>
+    	<type>jar</type>
+    	<scope>compile</scope>
+    </dependency>
   </dependencies>
 </project>
