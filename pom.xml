@@ -44,6 +44,7 @@
     	<groupId>taglibs</groupId>
     	<artifactId>standard</artifactId>
     	<version>1.1.2</version>
+    	<scope>runtime</scope>
     </dependency>
     <dependency>
     	<groupId>javax.servlet</groupId>
@@ -75,22 +76,22 @@
     	<groupId>commons-discovery</groupId>
     	<artifactId>commons-discovery</artifactId>
     	<version>0.2</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>axis</groupId>
     	<artifactId>axis-wsdl4j</artifactId>
     	<version>1.5.1</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>org.apache.axis</groupId>
     	<artifactId>axis-saaj</artifactId>
     	<version>1.4</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>net.sourceforge.jtds</groupId>
+    	<artifactId>jtds</artifactId>
+    	<version>1.2.2</version>
+    	<scope>runtime</scope>
     </dependency>
   </dependencies>
 </project>
