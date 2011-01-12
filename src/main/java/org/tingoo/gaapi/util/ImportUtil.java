@@ -176,7 +176,9 @@ public class ImportUtil {
 
 			Session s = HibernateUtil.getSessionFactory("gaapi").openSession();
 			List<Department> departments = s.createQuery("from Department").list();
+			s.close();
 
+			
 			Department dep ;
 			int size = departments.size();
 			for (int i = 0; i<size; i++) {
@@ -185,9 +187,9 @@ public class ImportUtil {
 
 				logger.info("total:" + size + "\tcur:" + i);
 				str1 = client.getSubUsers(strOrgUnitID).get_any()[0].toString();
-				logger.info("client.getSubUsers(strOrgUnitID);");
-				logger.info("strOrgUnitID=" + strOrgUnitID);
-				logger.info(dep.getName());
+//				logger.info("client.getSubUsers(strOrgUnitID);");
+				logger.info("dep.getName()" + dep.getName() + "\tstrOrgUnitID=" + strOrgUnitID);
+//				logger.info(dep.getName());
 				logger.debug(str1);
 
 				doc = DocumentHelper.parseText(str1);
@@ -230,6 +232,7 @@ public class ImportUtil {
 					// </user>
 					// </users></value></return>
 
+					s = HibernateUtil.getSessionFactory("gaapi").openSession();
 					Transaction t;
 					int usersize = users.size();
 					logger.info("found users:" + usersize);
@@ -238,6 +241,7 @@ public class ImportUtil {
 						
 						Element e = users.get(j);
 						Member m = new Member();
+						m.setDepartment(dep);
 
 						m.setId(e.elementText("userid"));
 						m.setUsername(e.elementText("username"));
@@ -276,11 +280,11 @@ public class ImportUtil {
 							logger.fatal(ex.getMessage(), ex);
 						}
 					}
+					s.close();
 				} else {
 					logger.warn(root.elementText("value"));
 				}
 			}
-			s.close();
 
 		} catch (ServiceException e) {
 			logger.fatal(e, e);

@@ -45,17 +45,18 @@ public class TestOrgQuery {
 			Element root;
 			List<Element> users, orgs;
 			
-//			str1 = client.getSubUsers(strOrgUnitID).get_any()[0].toString();
-//			doc = DocumentHelper.parseText(str1);
-//			root = doc.getRootElement();
-//			users = root.element("value").element("users").elements();
-//			
-//			for(Iterator<Element> i = users.iterator(); i.hasNext();) {
-//				Element e = i.next();
-//				System.out.println(e.elementText("departname"));
-//				System.out.println(e.elementText("membername"));
-//				System.out.println(e.elementText("duty"));
-//			}
+//			strOrgUnitID = "5263edab-db35-4866-8beb-fe07242f909a";
+			str1 = client.getSubUsers(strOrgUnitID).get_any()[0].toString();
+			doc = DocumentHelper.parseText(str1);
+			root = doc.getRootElement();
+			users = root.element("value").element("users").elements();
+			
+			for(Iterator<Element> i = users.iterator(); i.hasNext();) {
+				Element e = i.next();
+				System.out.println(e.elementText("departname"));
+				System.out.println(e.elementText("membername"));
+				System.out.println(e.elementText("duty"));
+			}
 
 			Element e;
 //			strOrgUnitID = "5263edab-db35-4866-8beb-fe07242f909a";

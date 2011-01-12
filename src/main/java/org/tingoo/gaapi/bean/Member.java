@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2010-12-28 15:27:58 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-10 11:05:16 by Hibernate Tools 3.2.4.GA
 
 import java.util.HashSet;
 import java.util.Set;
@@ -11,6 +11,7 @@ import java.util.Set;
 public class Member implements java.io.Serializable {
 
 	private String id;
+	private Department department;
 	private String username;
 	private String password;
 	private String isapproved;
@@ -46,17 +47,19 @@ public class Member implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Member(String id, String username, String password,
-			String isapproved, String islockedout, String createdate,
-			Integer orderindex, String policeid, String membername, String sex,
-			String duty, String birthday, String ismarry, String shortmobile,
-			String mobile, String officephone, String type, String state,
+	public Member(String id, Department department, String username,
+			String password, String isapproved, String islockedout,
+			String createdate, Integer orderindex, String policeid,
+			String membername, String sex, String duty, String birthday,
+			String ismarry, String shortmobile, String mobile,
+			String officephone, String type, String state,
 			String startworkdate, String createtime, String modifytime,
 			String innerofficephone, Set<Group> groups,
 			Set<Fault> faultsForPostman, Set<Process> processes,
 			Set<User> users, Set<GroupContact> groupContacts,
 			Set<Fault> faultsForOpman) {
 		this.id = id;
+		this.department = department;
 		this.username = username;
 		this.password = password;
 		this.isapproved = isapproved;
@@ -92,6 +95,14 @@ public class Member implements java.io.Serializable {
 
 	public void setId(String id) {
 		this.id = id;
+	}
+
+	public Department getDepartment() {
+		return this.department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
 	}
 
 	public String getUsername() {
@@ -310,53 +321,4 @@ public class Member implements java.io.Serializable {
 		this.faultsForOpman = faultsForOpman;
 	}
 
-	@Override
-	public String toString() {
-		StringBuffer sb = new StringBuffer();
-		sb.append("id:");
-		sb.append(this.id);
-		sb.append("\nbirthday:");
-		sb.append(this.birthday);
-		sb.append("\ncreatedate:");
-		sb.append(this.createdate);
-		sb.append("\ncreatetime:");
-		sb.append(this.createtime);
-		sb.append("\nduty:");
-		sb.append(this.duty);
-		sb.append("\nid:");
-		sb.append(this.innerofficephone);
-		sb.append("\nid:");
-		sb.append(this.isapproved);
-		sb.append("\nid:");
-		sb.append(this.islockedout);
-		sb.append("\nid:");
-		sb.append(this.ismarry);
-		sb.append("\nid:");
-		sb.append(this.membername);
-		sb.append("\nid:");
-		sb.append(this.mobile);
-		sb.append("\nid:");
-		sb.append(this.modifytime);
-		sb.append("\nid:");
-		sb.append(this.officephone);
-		sb.append("\nid:");
-		sb.append(this.password);
-		sb.append("\nid:");
-		sb.append(this.policeid);
-		sb.append("\nid:");
-		sb.append(this.sex);
-		sb.append("\nid:");
-		sb.append(this.shortmobile);
-		sb.append("\nid:");
-		sb.append(this.startworkdate);
-		sb.append("\nid:");
-		sb.append(this.state);
-		sb.append("\nid:");
-		sb.append(this.type);
-		sb.append("\nid:");
-		sb.append(this.username);
-		sb.append("\nid:");
-		
-		return sb.toString();
-	}
 }
