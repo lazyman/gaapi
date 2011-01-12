@@ -1,0 +1,24 @@
+/* CSS Document */
+#main {
+	background-color:#CCCCCC;
+	width:750px;
+	height: 500px;
+}
+
+.department {
+	background-color:#66FFCC;
+	width:100%;
+}
+
+.parentdep {
+}
+
+.depunit {
+	width:24%;
+	float: left;
+	margin: 2px;
+}
+
+.namehead {
+	width:70;
+}

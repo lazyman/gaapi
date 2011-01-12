@@ -1,0 +1,69 @@
+/* CSS Document */
+body{font-family: ËÎÌו;font-size: 12px;color: #353535;margin:0px;background-color: #808080;}
+td,th {font-size: 12px;color: #353535;margin:0px; }
+
+a:link{font-size:12px; color:#353535; text-decoration:none}
+a:hover{font-size:12px; color:#353535;text-decoration: none}
+a:visited{font-size:12px; color:#353535;text-decoration:none}
+a:active{font-size:12px; color:#353535;text-decoration:none}
+
+/* head */
+.sz{font-size:12px; color:#005FBB; font-weight: bold;}
+
+/* foot */
+.foot{font-size:12px; color:#FFffff;}
+.foot1{font-size:12px; color:#ffffff; font-weight: bold;}
+
+/* left */
+.left{font-size:12px; color:#000000;}
+.height{line-height:22px;}
+.input_1{
+	font-size:12px;
+	color: #444444;
+	background-color:#FFFFFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #000000;
+	border-right-color: #D4D0C7;
+	border-bottom-color: #D4D0C7;
+	border-left-color: #000000;
+}
+
+/* right */
+.right{font-size:12px; color:#fe2c00; font-weight: bold;}
+.right1{font-size:12px; color:#1c48aa; font-weight: bold;}
+.right2{font-size:14px; color:#0062bb; font-weight: bold;}
+.right3{font-size:12px; color:#000000; font-weight: bold;}
+
+.white:link {font-size:12px;color: #ffffff;text-decoration: none;}
+.white:visited {font-size:12px;text-decoration: none;color: #ffffff;}
+.white:hover {font-size:12px;text-decoration: none;color: #ffffff;}
+.white:active {font-size:12px;text-decoration: none;color: #ffffff;}
+
+.white1:link {font-size:12px;color: #005caf;text-decoration: none;}
+.white1:visited {font-size:12px;text-decoration: none;color: #005caf;}
+.white1:hover {font-size:12px;text-decoration: none;color: #005caf;}
+.white1:active {font-size:12px;text-decoration: none;color: #005caf;}
+
+.red:link {font-size:12px;color: #ff0000;text-decoration: none;}
+.red:visited {font-size:12px;text-decoration: none;color: #ff0000;}
+.red:hover {font-size:12px;text-decoration: none;color: #ff0000;}
+.red:active {font-size:12px;text-decoration: none;color: #ff0000;}
+
+.red1:link {font-size:12px;color: #fe2c00;text-decoration: none;}
+.red1:visited {font-size:12px;text-decoration: none;color: #fe2c00;}
+.red1:hover {font-size:12px;text-decoration: none;color: #fe2c00;}
+.red1:active {font-size:12px;text-decoration: none;color: #fe2c00;}
+
+.red2:link {font-size:12px;color: #0062bb;text-decoration: none;}
+.red2:visited {font-size:12px;text-decoration: none;color: #0062bb;}
+.red2:hover {font-size:12px;text-decoration: none;color: #0062bb;}
+.red2:active {font-size:12px;text-decoration: none;color: #0062bb;}
+
+.tc{font-size:14px;color:#ffffff;font-weight:bold;}
