@@ -18,9 +18,9 @@ public class HibernateUtil {
     static {
         try {
             // Create the SessionFactory from hibernate.cfg.xml
-            sessionFactory = new Configuration().configure("hibernate-main.cfg.xml").buildSessionFactory();
-            yhSession = new Configuration().configure("hibernate_yh.cfg.xml").buildSessionFactory(); 
-            gaapiSession = new Configuration().configure("hibernate_yhapi.cfg.xml").buildSessionFactory();
+            sessionFactory = new Configuration().configure("hibernate/hibernate-main.cfg.xml").buildSessionFactory();
+            yhSession = new Configuration().configure("hibernate/hibernate_yh.cfg.xml").buildSessionFactory(); 
+            gaapiSession = new Configuration().configure("hibernate/hibernate_yhapi.cfg.xml").buildSessionFactory();
             
             
             dbs.put("default", sessionFactory);

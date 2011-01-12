@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<package name="news" extends="struts-default" namespace="/news">
+		<global-results>
+			<result name="error">error.jsp</result>
+			<result name="relogin" type="redirect">/index.jsp</result>
+		</global-results>
+
+		<action name="add" method="add" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result>input.jsp</result>
+			<result name="fail">/index.jsp</result>
+		</action>
+		<action name="modify" method="modify" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result>input.jsp</result>
+			<result name="fail">/index.jsp</result>
+		</action>
+		<action name="delete" method="delete" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result type="redirect">search</result>
+			<result name="fail">/index.jsp</result>
+		</action>
+		<action name="save" method="save" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result type="redirect">search</result>
+			<result name="error">error.jsp</result>
+			<result name="pwdwrong">pwdwrong.jsp</result>
+		</action>
+
+		<action name="list" method="list" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result>list.jsp</result>
+		</action>
+		<action name="search" method="search" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result>search.jsp</result>
+		</action>
+		<action name="info" method="info" class="org.tingoo.ga.wwmis.action.NewsAction">
+			<result>info.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

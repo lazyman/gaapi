@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+
+    <package name="form" namespace="/form" extends="struts-default">
+        <!-- 使用通配符调用多个方法,method为*对应的字符串 -->
+        <action name="userAction_*" class="com.struts2.form.FormAction" method="{1}">
+            <!-- 方法返回的字符串对应name,再转发到页面 -->
+            <result name="list">/form/list.jsp</result>
+            <result name="info">/form/info.jsp</result>
+            <!-- 重定向Action,可以有Action名字和空间,参数 -->
+            <result name="toList" type="redirectAction">
+                <!-- 空间参数,不写代表和当前Action同一个空间
+                <param name="namespace">form</param>
+                 -->
+                <!-- 重定向Action的名称 -->
+                <param name="actionName">userAction_list</param>
+                <!-- url带的参数,${userBean.name}是动态参数,值为Action的属性userBean中name的值 -->
+                <param name="userName">${userBean.name}</param>
+                <param name="userAge">${userBean.age}</param>
+            </result>
+            
+        </action>
+    </package>
+</struts>
