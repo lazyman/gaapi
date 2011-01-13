@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC 
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="gongzi" extends="struts-default" namespace="/gz">
+		<interceptors>
+			<interceptor name="loginInterceptor" class="loginInterceptor"></interceptor>
+			<interceptor-stack name="loginDefaultStack">
+				<interceptor-ref name="loginInterceptor"></interceptor-ref>
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+		</interceptors>
+		<!-- default-interceptor-ref name="loginDefaultStack"></default-interceptor-ref-->
+		
+		<global-results>
+			<result name="login" type="redirect">index.jsp</result>
+		</global-results>
+		
+		<action name="index" class="indexAction">
+			<result>index.jsp</result>
+		</action>
+		<action name="logout" class="logoutAction"></action>
+		
+		<action name="login" class="loginAction" method="login">
+			<result type="redirect">${goingToURL}</result>
+			<result name="input">/login.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="register" class="registerAction">
+			<result type="redirect">/login.jsp</result>
+			<result name="input">/register.jsp</result>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	</package>
+</struts>
