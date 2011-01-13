@@ -2,7 +2,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="css/css.css" rel="stylesheet" type="text/css" />
 <link href="css/txl.css" rel="stylesheet" type="text/css" />
 
@@ -77,11 +77,11 @@ timeprint();
 		</td>
 	</tr>
 </table>
-<table width="1002" height="464" border="0" align="center"
+<table width="1002" height="350" border="0" align="center"
 	cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
 	<tr>
 		<td colspan="2" id="mune" style="display: block" valign="top"
-			background="images/left.jpg" width="237">
+			background="images/left.jpg" width="222">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="1"></td>
@@ -229,13 +229,11 @@ timeprint();
 				<img src="images/jt1.jpg" width="7" height="32" onclick="show()" /></td>
 			</tr>
 		</table>	</td>
-	<td width="731" valign="top">
-		<table width="10%" border="0" cellspacing="0" cellpadding="0">
+	<td width="780" valign="top">
+		<table width="99%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td height="6">                            </td>
                         </tr>
-                </table>
-                    <table width="99%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td height="37" background="images/mid3.jpg">
                                 <table width="99%" border="0" cellspacing="0" cellpadding="0">
@@ -251,13 +249,11 @@ timeprint();
                                     </tr>
                                 </table>                            </td>
                         </tr>
-                    </table>
-                    <table width="10%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td height="10">                            </td>
                         </tr>
-                    </table>
-					<table cellpadding="2" cellspacing="1" class="tablehead" width="100%">
+					<tr><td>
+					<table cellpadding="2" cellspacing="1" class="tablehead blueboard" width="98%">
                             <tr style="background:#ffffff;"><td class="namehead">姓名</td><td width="150" style="color:#0a5baa;font-size:10.5pt">耿礼瑞</td><td class="namehead">警号</td><td>98212401</td><td class="namehead">职务</td>
                             	<td colspan="3">协警</td>
                        		</tr>
@@ -269,14 +265,14 @@ timeprint();
                             <tr style="background:#ffffff;"><td class="namehead">电子信箱</td>
                             <td colspan="7">&nbsp;</td>
                             </tr>
-                            </table>
-                    <br />
-                    <table width="10%" border="0" cellspacing="0" cellpadding="0">
                         <tr>
                             <td height="12">
                             </td>
                         </tr>
                     </table>
+					</td>
+					</tr>
+					</table>
                     <table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
                         <tr>
                             <td height="25" align="right" bgcolor="#f4fbff">
@@ -287,7 +283,6 @@ timeprint();
 		</td>
   </tr>
 </table>
-		<!-- main -->
 		
 </form>
 </body>

@@ -6,7 +6,6 @@
 }
 
 .department {
-	background-color:#66FFCC;
 	width:100%;
 }
 
@@ -21,4 +20,9 @@
 
 .namehead {
 	width:70;
+}
+
+.blueboard {
+	border-color:#00FFFF;
+	border-width:thin;
 }

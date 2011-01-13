@@ -77,11 +77,11 @@ timeprint();
 		</td>
 	</tr>
 </table>
-<table width="1002" height="464" border="0" align="center"
+<table width="1002" height="300" border="0" align="center"
 	cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
 	<tr>
-		<td colspan="2" id="mune" style="display: block" valign="top"
-			background="images/left.jpg" width="237">
+		<td width="222" colspan="2" id="mune" style="display: block" valign="top"
+			background="images/left.jpg">
 		<table width="100%" border="0" cellspacing="0" cellpadding="0">
 			<tr>
 				<td width="1"></td>
@@ -230,13 +230,13 @@ timeprint();
 				</td>
 				<td width="7" align="right"><img src="images/jt.jpg" width="7"
 					height="32" onclick="show()" /></td>
-				<td width="7" id="mune1" align="right" style="display: none">
+				<td width="10" id="mune1" align="right" style="display: none">
 				<img src="images/jt1.jpg" width="7" height="32" onclick="show()" /></td>
 				
 			</tr>
 		</table>
 	</td>
-	<td width="731" valign="top"><table width="100%" border="0" align="center" cellpadding="0"
+	<td width="780" valign="top"><table width="100%" border="0" align="center" cellpadding="0"
 			cellspacing="0" background="images/mid2.gif">
 			<tr>
 				<td height="24" colspan="5" class="right"><a href="#"
@@ -244,8 +244,8 @@ timeprint();
 					color="red">〖公安〗</font></a></td>
 			</tr>
 			<tr>
-				<td width="472">
-				<div id='cf3cf317-9268-4e45-9ee8-e8866a548404' style="display: ">
+				<td width="100%">
+				<div id='cf3cf317-9268-4e45-9ee8-e8866a548404' style="display: " class="department">
 					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
 					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
 					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
