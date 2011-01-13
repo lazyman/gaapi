@@ -7,11 +7,11 @@
 </head>
 <style>
 .lable {
-	width:100px;
+	width:50%;
 	text-align:right;
 }
 </style>
-<body>
+<body background="images/chaxiu.jpg">
 <h1 align="center">工资查询</h1>
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
