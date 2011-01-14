@@ -19,12 +19,9 @@
 			<result name="login" type="redirect">index.jsp</result>
 		</global-results>
 		
-		<action name="index" class="indexAction">
-			<result>index.jsp</result>
-		</action>
 		<action name="logout" class="logoutAction"></action>
 		
-		<action name="login" class="loginAction" method="login">
+		<action name="login" class="org.tingoo.gaapi.action.LoginAction" method="login">
 			<result type="redirect">${goingToURL}</result>
 			<result name="input">/login.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
