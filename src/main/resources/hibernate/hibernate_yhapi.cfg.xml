@@ -15,7 +15,7 @@
         
         <mapping resource="org/tingoo/gaapi/bean/Department.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/Process.hbm.xml" />
-        <mapping resource="org/tingoo/gaapi/bean/Member.hbm.xml" />
+        <mapping resource="org/tingoo/gaapi/bean/MemberDetail.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/Fault.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/Category.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/User.hbm.xml" />

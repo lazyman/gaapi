@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA -->
+<!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
     <class name="org.tingoo.gaapi.bean.Fault" table="fault_" schema="dbo" catalog="gaapi">
         <id name="id" type="int">
             <column name="id_" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="memberByPostman" class="org.tingoo.gaapi.bean.Member" fetch="select">
+        <many-to-one name="memberDetailByPostman" class="org.tingoo.gaapi.bean.MemberDetail" fetch="select">
             <column name="postman_" length="50" />
         </many-to-one>
-        <many-to-one name="memberByOpman" class="org.tingoo.gaapi.bean.Member" fetch="select">
+        <many-to-one name="memberDetailByOpman" class="org.tingoo.gaapi.bean.MemberDetail" fetch="select">
             <column name="opman_" length="50" />
         </many-to-one>
         <property name="description" type="clob">

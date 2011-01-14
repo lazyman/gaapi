@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2011-1-10 11:05:16 by Hibernate Tools 3.2.4.GA -->
+<!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Member" table="member_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.bean.MemberDetail" table="member_detail_" schema="dbo" catalog="gaapi">
         <id name="id" type="string">
             <column name="id_" length="50" />
             <generator class="assigned" />
@@ -18,13 +18,13 @@
             <column name="password_" length="80" />
         </property>
         <property name="isapproved" type="string">
-            <column name="isapproved_" length="100" />
+            <column name="isapproved_" length="1" />
         </property>
         <property name="islockedout" type="string">
-            <column name="islockedout_" length="100" />
+            <column name="islockedout_" length="1" />
         </property>
         <property name="createdate" type="string">
-            <column name="createdate_" length="300" />
+            <column name="createdate_" length="30" />
         </property>
         <property name="orderindex" type="java.lang.Integer">
             <column name="orderindex_" />
@@ -36,31 +36,31 @@
             <column name="membername_" length="50" />
         </property>
         <property name="sex" type="string">
-            <column name="sex_" length="100" />
+            <column name="sex_" length="1" />
         </property>
         <property name="duty" type="string">
-            <column name="duty_" length="200" />
+            <column name="duty_" length="50" />
         </property>
         <property name="birthday" type="string">
-            <column name="birthday_" length="300" />
+            <column name="birthday_" length="30" />
         </property>
         <property name="ismarry" type="string">
-            <column name="ismarry_" length="100" />
+            <column name="ismarry_" length="1" />
         </property>
         <property name="shortmobile" type="string">
-            <column name="shortmobile_" length="200" />
+            <column name="shortmobile_" length="20" />
         </property>
         <property name="mobile" type="string">
-            <column name="mobile_" length="200" />
+            <column name="mobile_" length="20" />
         </property>
         <property name="officephone" type="string">
-            <column name="officephone_" length="200" />
+            <column name="officephone_" length="20" />
         </property>
         <property name="type" type="string">
-            <column name="type_" length="100" />
+            <column name="type_" length="1" />
         </property>
         <property name="state" type="string">
-            <column name="state_" length="100" />
+            <column name="state_" length="1" />
         </property>
         <property name="startworkdate" type="string">
             <column name="startworkdate_" length="30" />
@@ -72,7 +72,7 @@
             <column name="modifytime_" length="30" />
         </property>
         <property name="innerofficephone" type="string">
-            <column name="innerofficephone_" length="100" />
+            <column name="innerofficephone_" length="20" />
         </property>
         <set name="groups" inverse="true" lazy="true" table="group_" fetch="select">
             <key>

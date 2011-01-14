@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 
 import java.sql.Clob;
 import java.util.Date;
@@ -13,8 +13,8 @@ import java.util.Set;
 public class Fault implements java.io.Serializable {
 
 	private int id;
-	private Member memberByPostman;
-	private Member memberByOpman;
+	private MemberDetail memberDetailByPostman;
+	private MemberDetail memberDetailByOpman;
 	private Clob description;
 	private Date createtime;
 	private Date finishtime;
@@ -28,12 +28,13 @@ public class Fault implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Fault(int id, Member memberByPostman, Member memberByOpman,
-			Clob description, Date createtime, Date finishtime, String posttel,
+	public Fault(int id, MemberDetail memberDetailByPostman,
+			MemberDetail memberDetailByOpman, Clob description,
+			Date createtime, Date finishtime, String posttel,
 			Set<Process> processes) {
 		this.id = id;
-		this.memberByPostman = memberByPostman;
-		this.memberByOpman = memberByOpman;
+		this.memberDetailByPostman = memberDetailByPostman;
+		this.memberDetailByOpman = memberDetailByOpman;
 		this.description = description;
 		this.createtime = createtime;
 		this.finishtime = finishtime;
@@ -49,20 +50,20 @@ public class Fault implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Member getMemberByPostman() {
-		return this.memberByPostman;
+	public MemberDetail getMemberDetailByPostman() {
+		return this.memberDetailByPostman;
 	}
 
-	public void setMemberByPostman(Member memberByPostman) {
-		this.memberByPostman = memberByPostman;
+	public void setMemberDetailByPostman(MemberDetail memberDetailByPostman) {
+		this.memberDetailByPostman = memberDetailByPostman;
 	}
 
-	public Member getMemberByOpman() {
-		return this.memberByOpman;
+	public MemberDetail getMemberDetailByOpman() {
+		return this.memberDetailByOpman;
 	}
 
-	public void setMemberByOpman(Member memberByOpman) {
-		this.memberByOpman = memberByOpman;
+	public void setMemberDetailByOpman(MemberDetail memberDetailByOpman) {
+		this.memberDetailByOpman = memberDetailByOpman;
 	}
 
 	public Clob getDescription() {

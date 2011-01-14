@@ -23,7 +23,7 @@ import org.tempuri.orgquery.OrgQuery;
 import org.tempuri.orgquery.OrgQueryLocator;
 import org.tempuri.orgquery.OrgQuerySoapStub;
 import org.tingoo.gaapi.bean.Department;
-import org.tingoo.gaapi.bean.Member;
+import org.tingoo.gaapi.bean.MemberDetail;
 
 import cn.com.lazyhome.util.HibernateUtil;
 
@@ -138,8 +138,8 @@ public class ImportUtil {
 	}
 
 	/**
-	 * 取制定部门的人员信息 
-	 * @param dep
+	 * 取指定部门的人员信息 
+	 * @param dep bean
 	 * @throws SOAPException
 	 * @throws ServiceException
 	 * @throws RemoteException
@@ -178,15 +178,17 @@ public class ImportUtil {
 				t = s.beginTransaction();
 
 				Element e = users.get(j);
-				Member m = toMember(e);
+				MemberDetail m = toMember(e);
 				m.setDepartment(dep);
 
 				try {
 					s.saveOrUpdate(m);
 					t.commit();
+					
+					logger.info(m.getMembername());
 				} catch (Exception ex) {
 					t.rollback();
-					logger.info(m);
+					logger.debug(m);
 					logger.fatal(ex.getMessage(), ex);
 				}
 			}
@@ -196,6 +198,21 @@ public class ImportUtil {
 		}
 	}
 
+	/**
+	 * 取指定部门的人员信息 
+	 * @param depid
+	 * @throws RemoteException
+	 * @throws SOAPException
+	 * @throws ServiceException
+	 * @throws DocumentException
+	 */
+	public void importUser(String depid) throws RemoteException, SOAPException, ServiceException, DocumentException {
+		Session s = getSession();
+		Department dep = (Department) s.get(Department.class, depid);
+		s.close();
+		
+		importUser(dep);
+	}
 	/**
 	 * 根据警号获取用户信息
 	 * 
@@ -213,7 +230,7 @@ public class ImportUtil {
 
 			Element e = root.element("value").element("user");
 
-			Member m = toMember(e);
+			MemberDetail m = toMember(e);
 
 			Session s = getSession();
 			Transaction t = s.beginTransaction();
@@ -299,7 +316,7 @@ public class ImportUtil {
 	 * @param e
 	 * @return
 	 */
-	private Member toMember(Element e) {
+	private MemberDetail toMember(Element e) {
 
 		// <user>
 		// <departname>&#x7F51;&#x7EDC;&#x8B66;&#x5BDF;&#x5927;&#x961F;(&#x4FE1;&#x901A;&#x79D1;)</departname>
@@ -334,7 +351,7 @@ public class ImportUtil {
 		// </user>
 		// </users></value></return>
 
-		Member m = new Member();
+		MemberDetail m = new MemberDetail();
 
 		m.setId(e.elementText("userid"));
 		m.setUsername(e.elementText("username"));
@@ -411,7 +428,7 @@ public class ImportUtil {
 	 *             没有这种产生消息摘要的算法
 	 * @throws UnsupportedEncodingException
 	 */
-	public String EncoderByMd5(String str, int size)
+	public static String EncoderByMd5(String str, int size)
 			throws NoSuchAlgorithmException, UnsupportedEncodingException {
 		// 确定计算方法
 		MessageDigest md5 = MessageDigest.getInstance("sha1");
@@ -430,28 +447,29 @@ public class ImportUtil {
 		}
 		// 加密后的字符串
 		if (size == 16) {
-			return buf.substring(8, 24);
+			return buf.substring(8, 24).toUpperCase();
 		} else {
-			return buf.toString();
+			return buf.toString().toUpperCase();
 		}
 	}
 
 	public static void main(String[] args) {
 		ImportUtil util = new ImportUtil();
 		try {
-			System.out.println(util.EncoderByMd5("111111"));
+			System.out.println(EncoderByMd5("d87357533").toUpperCase());
+			System.out.println(EncoderByMd5("d87357533", 16));
 
 			// util.importDepart();
 			// util.importUser();
-			util.getUserInfo("98212402");
-		} catch (NoSuchAlgorithmException e) {
-			e.printStackTrace();
-		} catch (UnsupportedEncodingException e) {
+//			util.getUserInfo("98212402");
+			String depid = "5030d644-3199-4cc1-bc2d-c4dcfb9577cf";//网警
+//			util.importUser(depid);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 
-	private String EncoderByMd5(String str) throws NoSuchAlgorithmException,
+	public static String EncoderByMd5(String str) throws NoSuchAlgorithmException,
 			UnsupportedEncodingException {
 		return EncoderByMd5(str, 32);
 	}

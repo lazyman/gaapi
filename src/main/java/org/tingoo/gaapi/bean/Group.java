@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 
 import java.sql.Clob;
 import java.util.Date;
@@ -13,7 +13,7 @@ import java.util.Set;
 public class Group implements java.io.Serializable {
 
 	private int id;
-	private Member member;
+	private MemberDetail memberDetail;
 	private String name;
 	private Clob description;
 	private Date createtime;
@@ -27,10 +27,11 @@ public class Group implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Group(int id, Member member, String name, Clob description,
-			Date createtime, String share, Set<GroupContact> groupContacts) {
+	public Group(int id, MemberDetail memberDetail, String name,
+			Clob description, Date createtime, String share,
+			Set<GroupContact> groupContacts) {
 		this.id = id;
-		this.member = member;
+		this.memberDetail = memberDetail;
 		this.name = name;
 		this.description = description;
 		this.createtime = createtime;
@@ -46,12 +47,12 @@ public class Group implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Member getMember() {
-		return this.member;
+	public MemberDetail getMemberDetail() {
+		return this.memberDetail;
 	}
 
-	public void setMember(Member member) {
-		this.member = member;
+	public void setMemberDetail(MemberDetail memberDetail) {
+		this.memberDetail = memberDetail;
 	}
 
 	public String getName() {

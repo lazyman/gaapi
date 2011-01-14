@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2011-1-10 11:05:16 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 
 import java.util.HashSet;
 import java.util.Set;
@@ -21,7 +21,7 @@ public class Department implements java.io.Serializable {
 	private Integer oaid;
 	private String basetype;
 	private String islooktel;
-	private Set<Member> members = new HashSet<Member>(0);
+	private Set<MemberDetail> memberDetails = new HashSet<MemberDetail>(0);
 
 	public Department() {
 	}
@@ -32,7 +32,8 @@ public class Department implements java.io.Serializable {
 
 	public Department(String id, String name, String code, String parent,
 			Integer type, Integer orderindex, String isorg, String ishaschid,
-			Integer oaid, String basetype, String islooktel, Set<Member> members) {
+			Integer oaid, String basetype, String islooktel,
+			Set<MemberDetail> memberDetails) {
 		this.id = id;
 		this.name = name;
 		this.code = code;
@@ -44,7 +45,7 @@ public class Department implements java.io.Serializable {
 		this.oaid = oaid;
 		this.basetype = basetype;
 		this.islooktel = islooktel;
-		this.members = members;
+		this.memberDetails = memberDetails;
 	}
 
 	public String getId() {
@@ -135,12 +136,12 @@ public class Department implements java.io.Serializable {
 		this.islooktel = islooktel;
 	}
 
-	public Set<Member> getMembers() {
-		return this.members;
+	public Set<MemberDetail> getMemberDetails() {
+		return this.memberDetails;
 	}
 
-	public void setMembers(Set<Member> members) {
-		this.members = members;
+	public void setMemberDetails(Set<MemberDetail> memberDetails) {
+		this.memberDetails = memberDetails;
 	}
 
 }

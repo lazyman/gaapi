@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 
 import java.sql.Clob;
 import java.util.Date;
@@ -12,7 +12,7 @@ public class Process implements java.io.Serializable {
 
 	private int id;
 	private Fault fault;
-	private Member member;
+	private MemberDetail memberDetail;
 	private String optype;
 	private Clob result;
 	private Date optime;
@@ -24,11 +24,11 @@ public class Process implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public Process(int id, Fault fault, Member member, String optype,
-			Clob result, Date optime) {
+	public Process(int id, Fault fault, MemberDetail memberDetail,
+			String optype, Clob result, Date optime) {
 		this.id = id;
 		this.fault = fault;
-		this.member = member;
+		this.memberDetail = memberDetail;
 		this.optype = optype;
 		this.result = result;
 		this.optime = optime;
@@ -50,12 +50,12 @@ public class Process implements java.io.Serializable {
 		this.fault = fault;
 	}
 
-	public Member getMember() {
-		return this.member;
+	public MemberDetail getMemberDetail() {
+		return this.memberDetail;
 	}
 
-	public void setMember(Member member) {
-		this.member = member;
+	public void setMemberDetail(MemberDetail memberDetail) {
+		this.memberDetail = memberDetail;
 	}
 
 	public String getOptype() {

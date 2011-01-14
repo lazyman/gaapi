@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 2011-1-10 11:05:16 by Hibernate Tools 3.2.4.GA -->
+<!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
     <class name="org.tingoo.gaapi.bean.Department" table="department_" schema="dbo" catalog="gaapi">
         <id name="id" type="string">
@@ -38,11 +38,11 @@
         <property name="islooktel" type="string">
             <column name="islooktel" length="1" />
         </property>
-        <set name="members" inverse="true" lazy="true" table="member_" fetch="select">
+        <set name="memberDetails" inverse="true" lazy="true" table="member_detail_" fetch="select">
             <key>
                 <column name="department_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Member" />
+            <one-to-many class="org.tingoo.gaapi.bean.MemberDetail" />
         </set>
     </class>
 </hibernate-mapping>

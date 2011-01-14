@@ -1,6 +1,6 @@
 package org.tingoo.gaapi.bean;
 
-// Generated 2010-12-23 15:14:14 by Hibernate Tools 3.2.4.GA
+// Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 
 import java.sql.Clob;
 import java.util.Date;
