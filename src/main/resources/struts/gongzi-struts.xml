@@ -7,7 +7,7 @@
 <struts>
 	<package name="gongzi" extends="struts-default" namespace="/gz">
 		<interceptors>
-			<interceptor name="loginInterceptor" class="loginInterceptor"></interceptor>
+			<interceptor name="loginInterceptor" class="org.tingoo.gaapi.action.interceptor.LoginInterceptor"></interceptor>
 			<interceptor-stack name="loginDefaultStack">
 				<interceptor-ref name="loginInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
@@ -19,18 +19,11 @@
 			<result name="login" type="redirect">index.jsp</result>
 		</global-results>
 		
-		<action name="logout" class="logoutAction"></action>
-		
 		<action name="login" class="org.tingoo.gaapi.action.LoginAction" method="login">
 			<result type="redirect">${goingToURL}</result>
 			<result name="input">/login.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 		</action>
 		
-		<action name="register" class="registerAction">
-			<result type="redirect">/login.jsp</result>
-			<result name="input">/register.jsp</result>
-			<interceptor-ref name="defaultStack"></interceptor-ref>
-		</action>
 	</package>
 </struts>
