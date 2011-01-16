@@ -21,9 +21,15 @@
 		
 		<action name="login" class="org.tingoo.gaapi.action.LoginAction" method="login">
 			<result type="redirect">${goingToURL}</result>
-			<result name="input">/login.jsp</result>
+			<result name="fail">index.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 		</action>
 		
+		<action name="import" class="org.tingoo.gaapi.action.gongzi.ImportAction">
+			<result>importok.jsp</result>
+			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
+		</action>
+		<action name="search" class="org.tingoo.gaapi.action.gongzi.SearchAction">
+		</action>
 	</package>
 </struts>
