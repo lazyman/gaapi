@@ -3,7 +3,7 @@
   <parent>
     <artifactId>webpom</artifactId>
     <groupId>cn.com.lazyhome.pom</groupId>
-    <version>1</version>
+    <version>2</version>
   </parent>
   <groupId>org.tingoo.ga</groupId>
   <artifactId>gaapi</artifactId>
@@ -30,27 +30,9 @@
 	</build>
   <dependencies>
     <dependency>
-    	<groupId>com.oracle</groupId>
-    	<artifactId>ojdbc14</artifactId>
-    	<version>9.2.0.8</version>
-    	<scope>runtime</scope>
-    </dependency>
-    <dependency>
     	<groupId>org.hibernate</groupId>
     	<artifactId>hibernate</artifactId>
     	<version>3.2.7.ga</version>
-    </dependency>
-    <dependency>
-    	<groupId>taglibs</groupId>
-    	<artifactId>standard</artifactId>
-    	<version>1.1.2</version>
-    	<scope>runtime</scope>
-    </dependency>
-    <dependency>
-    	<groupId>javax.servlet</groupId>
-    	<artifactId>jstl</artifactId>
-    	<version>1.2</version>
-    	<scope>runtime</scope>
     </dependency>
     <dependency>
     	<groupId>org.logicalcobwebs</groupId>
@@ -89,12 +71,6 @@
     	<version>1.4</version>
     </dependency>
     <dependency>
-    	<groupId>net.sourceforge.jtds</groupId>
-    	<artifactId>jtds</artifactId>
-    	<version>1.2.2</version>
-    	<scope>runtime</scope>
-    </dependency>
-    <dependency>
     	<groupId>org.apache.struts</groupId>
     	<artifactId>struts2-core</artifactId>
     	<version>2.2.1</version>
@@ -121,6 +97,12 @@
     	<groupId>jboss</groupId>
     	<artifactId>javassist</artifactId>
     	<version>3.7.ga</version>
+    </dependency>
+    <dependency>
+    	<groupId>com.oracle</groupId>
+    	<artifactId>ojdbc14</artifactId>
+    	<version>9.2.0.8</version>
+    	<scope>runtime</scope>
     </dependency>
   </dependencies>
 </project>
