@@ -4,6 +4,10 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
+	<!-- 
+	<package name="home" extends="struts-default" namespace="/"></package>
+	-->
+	
 	<include file="struts/gongzi-struts.xml"></include>
 	
 	<!-- 

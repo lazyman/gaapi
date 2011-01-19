@@ -5,7 +5,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="gongzi" extends="struts-default" namespace="/gz">
+	<package name="gz" extends="struts-default" namespace="/gz">
 		<interceptors>
 			<interceptor name="loginInterceptor" class="org.tingoo.gaapi.action.interceptor.LoginInterceptor"></interceptor>
 			<interceptor-stack name="loginDefaultStack">
