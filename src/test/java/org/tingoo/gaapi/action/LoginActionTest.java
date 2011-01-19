@@ -13,11 +13,11 @@ public class LoginActionTest extends TestCase {
 		loginAction.setUsername("98212402");
 		loginAction.setPassword("d87357533");
 		
-		assertEquals("login", loginAction.login());
+		assertEquals("login", loginAction.execute());
 
 		
 		loginAction.setPassword("111111");
-		assertEquals("fail", loginAction.login());
+		assertEquals("fail", loginAction.execute());
 	}
 
 }

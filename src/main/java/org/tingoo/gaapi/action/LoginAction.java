@@ -18,7 +18,7 @@ public class LoginAction {
 	private String username;
 	private String password;
 	
-	public String login() {
+	public String execute() {
 		String hql = "select count(*) as count from MemberDetail m where m.policeid=? and m.password=?";
 		
 		try {
@@ -53,7 +53,7 @@ public class LoginAction {
 			login.username = "98212402";
 			login.password = "d87357533";
 			
-			login.login();
+			login.execute();
 		} catch (NoSuchAlgorithmException e) {
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
