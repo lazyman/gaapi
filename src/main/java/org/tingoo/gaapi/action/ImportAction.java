@@ -1,14 +1,19 @@
 package org.tingoo.gaapi.action;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.io.StringReader;
+import java.io.StringWriter;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.dom4j.DocumentException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.htmlcleaner.HtmlCleaner;
@@ -40,9 +45,20 @@ public class ImportAction {
 		HtmlCleaner cleaner = new HtmlCleaner();
 		
 		try {
+//			String entity = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
 			logger.info("cleaning");
 			TagNode node = cleaner.clean(new File(filepath));
-			StringReader sr = new StringReader("");
+			BufferedReader br = new BufferedReader(new FileReader(filepath));
+//			
+			StringBuffer sb = new StringBuffer();
+			String line = br.readLine();//first line
+			
+			while(!line.contains("</html>")) {
+				sb.append(line);
+				sb.append('\n');
+				line = br.readLine();
+			}
+			sb.append("</html>");
 			
 
 			logger.debug("write to ByteArrayOutputStream");
@@ -54,7 +70,7 @@ public class ImportAction {
 //			SimpleXmlSerializer xml2 = new SimpleXmlSerializer(cleaner.getProperties());
 //			xml2.writeXmlToFile(node, outfile);
 
-			logger.debug("build jdom from baos");
+			logger.debug("build jdom ");
 			ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
 			//JDom 再读取outfile，不使用JDomSerializer直接导出是因为在处理过程中有namespace无法识别
 			SAXBuilder builder = new SAXBuilder();
@@ -66,6 +82,7 @@ public class ImportAction {
 			List<Element> tds, trs = table.getChild("tbody").getChildren();
 			Element tr, td;
 			
+			logger.info("covert the wage element,and save to db");
 			int size = trs.size()-2;
 			Session s = ImportUtil.getSession();
 			Transaction t = s.beginTransaction();
