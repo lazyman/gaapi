@@ -4,6 +4,7 @@ import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -18,6 +19,7 @@ import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
 import org.tingoo.gaapi.bean.Wage;
+import org.tingoo.gaapi.bean.WageId;
 import org.tingoo.gaapi.util.ImportUtil;
 
 public class ImportAction {
@@ -40,6 +42,7 @@ public class ImportAction {
 		try {
 			logger.info("cleaning");
 			TagNode node = cleaner.clean(new File(filepath));
+			StringReader sr = new StringReader("");
 			
 
 			logger.debug("write to ByteArrayOutputStream");
@@ -72,7 +75,9 @@ public class ImportAction {
 				
 				int tdi = 0;
 				Wage wage = new Wage();
-				wage.setCode(tds.get(tdi++).getText());
+				WageId id = new WageId();
+				wage.setId(id);
+				id.setCode(tds.get(tdi++).getText());
 				wage.setName(tds.get(tdi++).getText());
 				wage.setDeptcode(tds.get(tdi++).getText());
 				wage.setDeptname(tds.get(tdi++).getText());
@@ -101,10 +106,10 @@ public class ImportAction {
 				wage.setQitadaikou(tds.get(tdi++).getText());
 				wage.setKoukuanheji(tds.get(tdi++).getText());
 				wage.setShifaheji(tds.get(tdi++).getText());
-				wage.setYuefen(tds.get(tdi++).getText());
+				id.setYuefen(tds.get(tdi++).getText());
 				wage.setBeizhu(tds.get(tdi++).getText());
 				
-				s.save(wage);
+				s.saveOrUpdate(wage);
 			}
 			
 			t.commit();
