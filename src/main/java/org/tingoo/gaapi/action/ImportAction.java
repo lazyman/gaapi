@@ -6,14 +6,10 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.io.RandomAccessFile;
-import java.io.StringReader;
-import java.io.StringWriter;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.dom4j.DocumentException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.htmlcleaner.HtmlCleaner;
