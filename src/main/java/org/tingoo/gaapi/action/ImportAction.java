@@ -1,10 +1,8 @@
 package org.tingoo.gaapi.action;
 
-import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
@@ -37,25 +35,12 @@ public class ImportAction {
 	}
 	
 	private void importfile(String filepath) {
-		String outfile = "target/out.xml";
 		HtmlCleaner cleaner = new HtmlCleaner();
 		
 		try {
-//			String entity = "<!DOCTYPE html PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">";
 			logger.info("cleaning");
 			TagNode node = cleaner.clean(new File(filepath));
-			BufferedReader br = new BufferedReader(new FileReader(filepath));
-//			
-			StringBuffer sb = new StringBuffer();
-			String line = br.readLine();//first line
-			
-			while(!line.contains("</html>")) {
-				sb.append(line);
-				sb.append('\n');
-				line = br.readLine();
-			}
-			sb.append("</html>");
-			
+
 
 			logger.debug("write to ByteArrayOutputStream");
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -76,7 +61,7 @@ public class ImportAction {
 			Element table = (Element) root.getChild("body").getChildren().get(1);
 			
 			List<Element> tds, trs = table.getChild("tbody").getChildren();
-			Element tr, td;
+			Element tr;
 			
 			logger.info("covert the wage element,and save to db");
 			int size = trs.size()-2;
