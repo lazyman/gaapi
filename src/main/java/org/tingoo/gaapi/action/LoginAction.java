@@ -12,7 +12,8 @@ import org.tingoo.gaapi.util.ImportUtil;
 
 public class LoginAction {
 	private static Log logger = LogFactory.getLog(LoginAction.class);
-	
+
+	public static final String SUCCESS = "success";
 	private String url = "search";
 	
 	private String username;
@@ -31,7 +32,7 @@ public class LoginAction {
 			int count = ((Long)q.uniqueResult()).intValue();
 			
 			if(count > 0) {
-				return "SUCCESS";
+				return SUCCESS;
 			} else {
 				return "fail";
 			}

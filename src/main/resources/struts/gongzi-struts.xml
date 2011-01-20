@@ -19,8 +19,8 @@
 			<result name="login" type="redirect">index.jsp</result>
 		</global-results>
 		
-		<action name="login" class="org.tingoo.gaapi.action.LoginAction" method="login">
-			<result type="redirect">${goingToURL}</result>
+		<action name="login" class="org.tingoo.gaapi.action.LoginAction" >
+			<result type="redirect">${url}</result>
 			<result name="fail">index.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 		</action>
@@ -30,6 +30,7 @@
 			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
 		</action>
 		<action name="search" class="org.tingoo.gaapi.action.gongzi.SearchAction">
+			<result>search.jsp</result>
 		</action>
 	</package>
 </struts>

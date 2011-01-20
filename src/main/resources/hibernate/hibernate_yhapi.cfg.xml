@@ -22,6 +22,7 @@
         <mapping resource="org/tingoo/gaapi/bean/GroupContact.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/Smslog.hbm.xml" />
         <mapping resource="org/tingoo/gaapi/bean/Group.hbm.xml" />
+        <mapping resource="org/tingoo/gaapi/bean/Wage.hbm.xml" />
     </session-factory>
     
 </hibernate-configuration>

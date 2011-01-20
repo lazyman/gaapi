@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2011-1-20 15:28:24 by Hibernate Tools 3.2.4.GA -->
+<hibernate-mapping>
+    <class name="org.tingoo.gaapi.bean.Wage" table="wage_" schema="dbo" catalog="gaapi">
+        <id name="id" type="int">
+            <column name="id_" />
+            <generator class="native" />
+        </id>
+        <property name="code" type="string">
+            <column name="code_" length="10" />
+        </property>
+        <property name="name" type="string">
+            <column name="name_" length="10" />
+        </property>
+        <property name="deptcode" type="string">
+            <column name="deptcode_" length="10" />
+        </property>
+        <property name="deptname" type="string">
+            <column name="deptname_" length="10" />
+        </property>
+        <property name="zhiwuGz" type="string">
+            <column name="zhiwu_gz_" length="10" />
+        </property>
+        <property name="jibieGz" type="string">
+            <column name="jibie_gz_" length="10" />
+        </property>
+        <property name="jishudengjiGz" type="string">
+            <column name="jishudengji_gz_" length="10" />
+        </property>
+        <property name="gangweiGz" type="string">
+            <column name="gangwei_gz_" length="15" />
+        </property>
+        <property name="shenghuoBt" type="string">
+            <column name="shenghuo_bt_" length="15" />
+        </property>
+        <property name="gongzuoJt1" type="string">
+            <column name="gongzuo_jt1_" length="15" />
+        </property>
+        <property name="gongzuoJt2" type="string">
+            <column name="gongzuo_jt2_" length="15" />
+        </property>
+        <property name="jingxianJt" type="string">
+            <column name="jingxian_jt_" length="15" />
+        </property>
+        <property name="teshuJt" type="string">
+            <column name="teshu_jt_" length="15" />
+        </property>
+        <property name="zhufangBt" type="string">
+            <column name="zhufang_bt_" length="15" />
+        </property>
+        <property name="yiliao" type="string">
+            <column name="yiliao_" length="15" />
+        </property>
+        <property name="tongxun" type="string">
+            <column name="tongxun_" length="15" />
+        </property>
+        <property name="chegai" type="string">
+            <column name="chegai_" length="15" />
+        </property>
+        <property name="qita1" type="string">
+            <column name="qita1_" length="15" />
+        </property>
+        <property name="qita2" type="string">
+            <column name="qita2_" length="15" />
+        </property>
+        <property name="bufa" type="string">
+            <column name="bufa_" length="15" />
+        </property>
+        <property name="yingfa" type="string">
+            <column name="yingfa_" length="15" />
+        </property>
+        <property name="gongjijing" type="string">
+            <column name="gongjijing_" length="15" />
+        </property>
+        <property name="geshui" type="string">
+            <column name="geshui_" length="15" />
+        </property>
+        <property name="yanglaobaoxian" type="string">
+            <column name="yanglaobaoxian_" length="15" />
+        </property>
+        <property name="yiliaobaoxian" type="string">
+            <column name="yiliaobaoxian_" length="15" />
+        </property>
+        <property name="shiyebaoxian" type="string">
+            <column name="shiyebaoxian_" length="15" />
+        </property>
+        <property name="qitadaikou" type="string">
+            <column name="qitadaikou_" length="15" />
+        </property>
+        <property name="koukuanheji" type="string">
+            <column name="koukuanheji_" length="15" />
+        </property>
+        <property name="shifaheji" type="string">
+            <column name="shifaheji_" length="15" />
+        </property>
+        <property name="yuefen" type="string">
+            <column name="yuefen_" length="15" />
+        </property>
+        <property name="beizhu" type="string">
+            <column name="beizhu_" />
+        </property>
+    </class>
+</hibernate-mapping>

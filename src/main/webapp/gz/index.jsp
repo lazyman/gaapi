@@ -20,11 +20,11 @@
 <table width="600" border="0" align="center">
 	<tr>
 		<td width="300" class="lable">用户名：</td>
-		<td width="300"><input type="text" name="textfield"></td>
+		<td width="300"><input name="username" type="text" id="username"></td>
 	</tr>
 	<tr>
 		<td class="lable">密码：</td>
-		<td><input type="password" name="textfield2"></td>
+		<td><input name="password" type="password" id="password"></td>
 	</tr>
 	<tr>
 		<td colspan="2" align="center"><input type="submit" name="Submit" value="登陆"></td>
