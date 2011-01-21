@@ -8,7 +8,7 @@
 </head>
 <body>
 <center>
-<s:form action="parse.jsp" method="post">
+<s:form action="parse.jsp" method="post" enctype="multipart/form-data">
 数据导入：
 <input type="file" name="file">
 	<input type="submit" name="Submit" value="导入">
