@@ -16,7 +16,7 @@
 <h1 align="center">工资查询</h1>
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
-<s:form theme="simple" action="/gz/login">
+<s:form theme="simple" action="login">
 <table width="600" border="0" align="center">
 	<tr>
 		<td width="300" class="lable">用户名：</td>

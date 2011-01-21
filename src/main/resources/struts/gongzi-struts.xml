@@ -16,11 +16,11 @@
 		<!-- default-interceptor-ref name="loginDefaultStack"></default-interceptor-ref-->
 		
 		<global-results>
-			<result name="login" type="redirect">index.jsp</result>
+			<result name="login" type="redirect">list.jsp</result>
 		</global-results>
 		
 		<action name="login" class="org.tingoo.gaapi.action.LoginAction" >
-			<result type="redirect">${url}</result>
+			<result type="redirect">search</result>
 			<result name="fail">index.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 		</action>

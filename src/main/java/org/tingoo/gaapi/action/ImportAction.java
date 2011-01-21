@@ -1,9 +1,12 @@
 package org.tingoo.gaapi.action;
 
+import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.io.StringWriter;
 import java.util.List;
 
 import org.apache.commons.logging.Log;
@@ -71,41 +74,43 @@ public class ImportAction {
 				tr = trs.get(i);
 				tds = tr.getChildren();
 				
+				
 				int tdi = 0;
 				Wage wage = new Wage();
 				WageId id = new WageId();
 				wage.setId(id);
-				id.setCode(tds.get(tdi++).getText());
-				wage.setName(tds.get(tdi++).getText());
-				wage.setDeptcode(tds.get(tdi++).getText());
-				wage.setDeptname(tds.get(tdi++).getText());
-				wage.setZhiwuGz(tds.get(tdi++).getText());
-				wage.setJibieGz(tds.get(tdi++).getText());
-				wage.setJishudengjiGz(tds.get(tdi++).getText());
-				wage.setGangweiGz(tds.get(tdi++).getText());
-				wage.setShenghuoBt(tds.get(tdi++).getText());
-				wage.setGongzuoJt1(tds.get(tdi++).getText());
-				wage.setGongzuoJt2(tds.get(tdi++).getText());
-				wage.setJingxianJt(tds.get(tdi++).getText());
-				wage.setTeshuJt(tds.get(tdi++).getText());
-				wage.setZhufangBt(tds.get(tdi++).getText());
-				wage.setYiliao(tds.get(tdi++).getText());
-				wage.setTongxun(tds.get(tdi++).getText());
-				wage.setChegai(tds.get(tdi++).getText());
-				wage.setQita1(tds.get(tdi++).getText());
-				wage.setQita2(tds.get(tdi++).getText());
-				wage.setBufa(tds.get(tdi++).getText());
-				wage.setYingfa(tds.get(tdi++).getText());
-				wage.setGongjijing(tds.get(tdi++).getText());
-				wage.setGeshui(tds.get(tdi++).getText());
-				wage.setYanglaobaoxian(tds.get(tdi++).getText());
-				wage.setYiliaobaoxian(tds.get(tdi++).getText());
-				wage.setShiyebaoxian(tds.get(tdi++).getText());
-				wage.setQitadaikou(tds.get(tdi++).getText());
-				wage.setKoukuanheji(tds.get(tdi++).getText());
-				wage.setShifaheji(tds.get(tdi++).getText());
-				id.setYuefen(tds.get(tdi++).getText());
-				wage.setBeizhu(tds.get(tdi++).getText());
+				
+				id.setCode(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setName(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setDeptcode(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setDeptname(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setZhiwuGz(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setJibieGz(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setJishudengjiGz(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setGangweiGz(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setShenghuoBt(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setGongzuoJt1(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setGongzuoJt2(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setJingxianJt(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setTeshuJt(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setZhufangBt(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setYiliao(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setTongxun(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setChegai(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setQita1(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setQita2(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setBufa(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setYingfa(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setGongjijing(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setGeshui(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setYanglaobaoxian(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setYiliaobaoxian(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setShiyebaoxian(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setQitadaikou(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setKoukuanheji(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setShifaheji(deleleQuestMark(tds.get(tdi++).getText()));
+				id.setYuefen(deleleQuestMark(tds.get(tdi++).getText()));
+				wage.setBeizhu(deleleQuestMark(tds.get(tdi++).getText()));
 				
 				s.saveOrUpdate(wage);
 			}
@@ -113,11 +118,17 @@ public class ImportAction {
 			t.commit();
 			s.close();
 			
+			logger.info("import wage finished");
 		} catch (IOException e) {
 			e.printStackTrace();
 		} catch (JDOMException e) {
 			e.printStackTrace();
 		}
+	}
+	private String deleleQuestMark(String str) {
+		String tmp = str.replace("?", "");
+		
+		return tmp;
 	}
 	
 	public static void main(String[] args) {
