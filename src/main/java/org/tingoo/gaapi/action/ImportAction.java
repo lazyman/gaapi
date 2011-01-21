@@ -59,6 +59,38 @@ public class ImportAction {
 		return SUCCESS;
 	}
 	
+	public File[] getFiles() {
+		return files;
+	}
+
+	public void setFiles(File[] files) {
+		this.files = files;
+	}
+
+	public String[] getFilesFileName() {
+		return filesFileName;
+	}
+
+	public void setFilesFileName(String[] filesFileName) {
+		this.filesFileName = filesFileName;
+	}
+
+	public String[] getFilesContentType() {
+		return filesContentType;
+	}
+
+	public void setFilesContentType(String[] filesContentType) {
+		this.filesContentType = filesContentType;
+	}
+
+	public ServletContext getServletContext() {
+		return servletContext;
+	}
+
+	public void setServletContext(ServletContext servletContext) {
+		this.servletContext = servletContext;
+	}
+
 	private void importfile(File filepath) {
 		HtmlCleaner cleaner = new HtmlCleaner();
 		
