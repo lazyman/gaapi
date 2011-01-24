@@ -25,11 +25,11 @@
 			<interceptor-ref name="defaultStack"></interceptor-ref>
 		</action>
 		
-		<action name="import" class="org.tingoo.gaapi.action.gongzi.ImportAction">
+		<action name="import" class="org.tingoo.gaapi.action.ImportAction">
 			<result>importok.jsp</result>
 			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
 		</action>
-		<action name="search" class="org.tingoo.gaapi.action.gongzi.SearchAction">
+		<action name="search" class="org.tingoo.gaapi.action.SearchAction">
 			<result>search.jsp</result>
 		</action>
 	</package>

@@ -3,12 +3,6 @@ package org.tingoo.gaapi.action.interceptor;
 
 import java.util.Map;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-
-//import org.apache.commons.lang.StringUtils;
-import org.apache.struts2.StrutsStatics;
-
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;
 import com.opensymphony.xwork2.interceptor.AbstractInterceptor;

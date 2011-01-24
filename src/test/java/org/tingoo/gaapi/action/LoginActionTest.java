@@ -1,5 +1,6 @@
 package org.tingoo.gaapi.action;
 
+
 import junit.framework.TestCase;
 
 public class LoginActionTest extends TestCase {

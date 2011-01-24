@@ -16,11 +16,11 @@ public class Init implements ServletContextListener {
 		System.setProperty("workdir", workdir);
 		
 		// set for hibernate
-		HibernateUtil.getSessionFactory();
+//		HibernateUtil.getSessionFactory();
 	}
 
 	public void contextDestroyed(ServletContextEvent event) {
 		// set for hibernate
-		HibernateUtil.getSessionFactory().close();
+//		HibernateUtil.getSessionFactory().close();
 	}
 }
