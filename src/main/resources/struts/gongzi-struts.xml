@@ -6,6 +6,8 @@
 
 <struts>
 	<package name="gz" extends="struts-default" namespace="/gz">
+		<default-action-ref name="index"></default-action-ref>
+		
 		<interceptors>
 			<interceptor name="loginInterceptor" class="org.tingoo.gaapi.action.interceptor.LoginInterceptor"></interceptor>
 			<interceptor-stack name="loginDefaultStack">
@@ -23,6 +25,10 @@
 			<result type="redirect">search</result>
 			<result name="fail">index.jsp</result>
 			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="index" class="org.tingoo.gaapi.action.IndexAction">
+			<result>index.jsp</result>
 		</action>
 		
 		<action name="import" class="org.tingoo.gaapi.action.ImportAction">
