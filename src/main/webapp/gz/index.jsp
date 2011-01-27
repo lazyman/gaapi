@@ -11,16 +11,28 @@
 	width:50%;
 	text-align:right;
 }
+.error {
+	color: red;
+	text-align: center;
+}
 </style>
 <body background="images/chaxiu.jpg">
 <h1 align="center">工资查询</h1>
 <p align="center">&nbsp;</p>
 <p align="center">&nbsp;</p>
+
 <s:form theme="simple" action="login">
+
 <table width="600" border="0" align="center">
 	<tr>
+		<td colspan="2" class="error">
+			<s:property value="#session.messages" />
+			<s:actionmessage />
+		</td>
+	</tr>
+	<tr>
 		<td width="300" class="lable">用户名：</td>
-		<td width="300"><input name="username" type="text" id="username"></td>
+		<td width="300"><s:textfield name="username"></s:textfield></td>
 	</tr>
 	<tr>
 		<td class="lable">密码：</td>
@@ -31,5 +43,8 @@
 	</tr>
 </table>
 </s:form>
+
+<center>
+</center>
 </body>
 </html>

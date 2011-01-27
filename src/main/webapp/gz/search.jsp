@@ -4,22 +4,22 @@
 xmlns:o="urn:schemas-microsoft-com:office:office"
 xmlns:x="urn:schemas-microsoft-com:office:excel">
 <body>
+<div><a href="import">工资数据导入</a></div>
 
 <h1 align="center">工资查询</h1>
 <br />
+
+<s:form theme="simple" action="search">
 <table width="700" border="0" align="center">
 	<tr>
-		<td width="10%">警号</td>
-		<td width="20%"><input name="policeno" type="text" id="policeno"></td>
-		<td width="10%">姓名</td>
-		<td width="20%"><input name="name" type="text" id="name"></td>
-		<td width="10%">月份</td>
-		<td width="20%"><input name="month" type="text" id="month" value="1"></td>
+		<td width="50%" align="right">月份</td>
+		<td width="*"><s:textfield name="month"></s:textfield></td>
 	</tr>
 	<tr>
-		<td colspan="6" align="center"><input type="submit" name="Submit" value="查询"></td>
+		<td colspan="2" align="center"><input type="submit" name="Submit" value="查询"></td>
 	</tr>
 </table>
+</s:form>
 
 <table border='0'>
 <tbody>
@@ -91,12 +91,13 @@ xmlns:x="urn:schemas-microsoft-com:office:excel">
 <TD class=clsGridHeadCell4  fieldname="MO" >月份<SPAN></SPAN></TD>
 
 <TD class=clsGridHeadCell4  fieldname="PR_PAYLIST_C01" >备注<SPAN></SPAN></TD></TR>
+
 <s:iterator value="wages" var="wage">
 <tr>
-<TD class=Normal width=100>${wage.code }&nbsp;</TD>
+<TD class=Normal width=100>${wage.id.code }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.name }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.deptcode }&nbsp;</TD>
-<TD class=Normal width=100 >${wage.deptname }&nbsp;</TD>
+<TD class=Normal width=100 >${session["gongzi.loginuser"].department.name }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.zhiwuGz }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.jibieGz }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.jishudengjiGz }&nbsp;</TD>
@@ -122,7 +123,7 @@ xmlns:x="urn:schemas-microsoft-com:office:excel">
 <TD class=Normal  width=100 >${wage.qitadaikou }&nbsp;</TD>
 <TD class=Normal  width=100 >${wage.koukuanheji }&nbsp;</TD>
 <TD class=Normal  width=100 >${wage.shifaheji }&nbsp;</TD>
-<TD class=Normal  width=100 >${wage.yuefen }&nbsp;</TD>
+<TD class=Normal  width=100 >${wage.id.yuefen }&nbsp;</TD>
 <TD class=Normal  width=100 >${wage.beizhu }&nbsp;</TD>
 </tr>
 </s:iterator>

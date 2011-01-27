@@ -4,14 +4,15 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>数据导入</title>
+<title>工资数据导入</title>
 </head>
 <body>
 <center>
-<s:form action="import" method="post" enctype="multipart/form-data">
-数据导入：
-<input type="file" name="file">
+<s:form action="dealimport" method="post" enctype="multipart/form-data">
+工资数据导入：
+<input type="file" name="files">
 	<input type="submit" name="Submit" value="导入">
 </s:form></center>
+
 </body>
 </html>

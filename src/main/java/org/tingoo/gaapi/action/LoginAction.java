@@ -2,16 +2,30 @@ package org.tingoo.gaapi.action;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.struts2.interceptor.ServletRequestAware;
+import org.apache.struts2.interceptor.ServletResponseAware;
 import org.hibernate.Query;
 import org.hibernate.Session;
+import org.tingoo.gaapi.action.interceptor.LoginInterceptor;
+import org.tingoo.gaapi.bean.Department;
+import org.tingoo.gaapi.bean.MemberDetail;
 import org.tingoo.gaapi.util.ImportUtil;
 
+import com.opensymphony.xwork2.ValidationAwareSupport;
 
-public class LoginAction {
+
+public class LoginAction extends ValidationAwareSupport implements ServletRequestAware, ServletResponseAware {
 	private static Log logger = LogFactory.getLog(LoginAction.class);
+	
+	private HttpServletRequest request;
+	private HttpServletResponse response;
 
 	public static final String SUCCESS = "success";
 	private String url = "search";
@@ -20,7 +34,7 @@ public class LoginAction {
 	private String password;
 	
 	public String execute() {
-		String hql = "select count(*) as count from MemberDetail m where m.policeid=? and m.password=?";
+		String hql = "from MemberDetail m where m.policeid=? and m.password=?";
 		
 		try {
 			Session s = ImportUtil.getSession();
@@ -29,13 +43,25 @@ public class LoginAction {
 			q.setString(0, username);
 			q.setString(1, ImportUtil.EncoderByMd5(password));
 			
-			int count = ((Long)q.uniqueResult()).intValue();
+			List<MemberDetail> members = q.list();
+			int count = members.size();
+			
+			MemberDetail member = null;
+			String rtn;
 			
 			if(count > 0) {
-				return SUCCESS;
+				member = members.get(0);
+				member.getDepartment().getName();
+				
+				rtn = SUCCESS;
 			} else {
-				return "fail";
+				addActionMessage("’À∫≈ªÚ√‹¬Î¥ÌŒÛ");
+				rtn = "login";
 			}
+			request.getSession().setAttribute(LoginInterceptor.USER_SESSION_KEY, member);
+			
+			s.close();
+			return rtn;
 			
 		} catch (NoSuchAlgorithmException e) {
 			logger.fatal(e.getMessage(), e);
@@ -76,6 +102,14 @@ public class LoginAction {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	@Override
+	public void setServletRequest(HttpServletRequest arg0) {
+		this.request = arg0;
+	}
+	@Override
+	public void setServletResponse(HttpServletResponse arg0) {
+		this.response = arg0;
 	}
 
 }
