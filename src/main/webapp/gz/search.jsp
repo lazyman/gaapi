@@ -1,10 +1,24 @@
 <%@ page contentType="text/html; charset=utf-8"%>
 <%@ taglib prefix="s" uri="/struts-tags"%>
-<html xmlns:v="urn:schemas-microsoft-com:vml"
-xmlns:o="urn:schemas-microsoft-com:office:office"
-xmlns:x="urn:schemas-microsoft-com:office:excel">
+<html>
+<title>工资查询</title>
+<style>
+#importpanel {
+	float:left;
+}
+#logininfo {
+	float:right;
+}
+#top {
+	clear: none;
+	height:50px;
+}
+</style>
 <body>
-<div><a href="import">工资数据导入</a></div>
+<div id="top">
+	<div id="importpanel"><a href="import">工资数据导入</a></div>
+	<div id="logininfo">${session["gongzi.loginuser"].membername} <a href="logout">退出</a></div>
+</div>
 
 <h1 align="center">工资查询</h1>
 <br />

@@ -3,6 +3,7 @@ package org.tingoo.gaapi.action;
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
 import java.util.List;
+import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -11,17 +12,17 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.apache.struts2.interceptor.ServletResponseAware;
+import org.apache.struts2.interceptor.SessionAware;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.tingoo.gaapi.action.interceptor.LoginInterceptor;
-import org.tingoo.gaapi.bean.Department;
 import org.tingoo.gaapi.bean.MemberDetail;
 import org.tingoo.gaapi.util.ImportUtil;
 
 import com.opensymphony.xwork2.ValidationAwareSupport;
 
 
-public class LoginAction extends ValidationAwareSupport implements ServletRequestAware, ServletResponseAware {
+public class LoginAction extends ValidationAwareSupport implements ServletRequestAware, ServletResponseAware, SessionAware {
 	private static Log logger = LogFactory.getLog(LoginAction.class);
 	
 	private HttpServletRequest request;
@@ -32,6 +33,8 @@ public class LoginAction extends ValidationAwareSupport implements ServletReques
 	
 	private String username;
 	private String password;
+
+	private Map<String, Object> session;
 	
 	public String execute() {
 		String hql = "from MemberDetail m where m.policeid=? and m.password=?";
@@ -72,6 +75,13 @@ public class LoginAction extends ValidationAwareSupport implements ServletReques
 		
 		return url;
 	}
+	
+	public String logout() {
+		request.getSession().setAttribute(LoginInterceptor.USER_SESSION_KEY, null);
+		LoginInterceptor.clearMessage(session);
+		
+		return "login"; 
+	}
 	public static void main(String[] args) {
 		try {
 			System.out.println(ImportUtil.EncoderByMd5("d87357533"));
@@ -110,6 +120,11 @@ public class LoginAction extends ValidationAwareSupport implements ServletReques
 	@Override
 	public void setServletResponse(HttpServletResponse arg0) {
 		this.response = arg0;
+	}
+
+	@Override
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
 	}
 
 }

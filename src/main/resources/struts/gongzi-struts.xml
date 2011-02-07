@@ -34,6 +34,9 @@
 		<action name="login" class="org.tingoo.gaapi.action.LoginAction" >
 			<result type="redirect">search</result>
 		</action>
+		<action name="logout" class="org.tingoo.gaapi.action.LoginAction" method="logout" >
+			<result type="redirect">index.jsp</result>
+		</action>
 		
 		<action name="index">
 			<result>index.jsp</result>
