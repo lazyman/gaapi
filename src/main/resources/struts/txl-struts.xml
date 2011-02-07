@@ -28,11 +28,11 @@
 		<default-action-ref name="index"></default-action-ref>
 		
 		<global-results>
-			<result name="login">index.jsp</result>
+			<result name="login">home.jsp</result>
 		</global-results>
 		
 		<action name="index" class="org.tingoo.gaapi.action.txl.IndexAction" >
-			<result>index.jsp</result>
+			<result>home.jsp</result>
 		</action>
 		
 		<action name="list" class="org.tingoo.gaapi.action.txl.ListAction">

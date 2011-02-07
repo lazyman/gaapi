@@ -1,4 +1,5 @@
 <%@ page contentType="text/html; charset=utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -10,9 +11,6 @@
 <title>公安通讯录</title>
 </head>
 <body>
-<form name="form1" method="post" action="index.aspx" id="form1">
-<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="" />
-
 <table width="1002" border="0" align="center" cellpadding="0"
 	cellspacing="0">
 	<tr>
@@ -245,13 +243,10 @@ timeprint();
 			</tr>
 			<tr>
 				<td width="100%">
-				<div id='cf3cf317-9268-4e45-9ee8-e8866a548404' style="display: " class="department">
-					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
-					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
-					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
-					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
-					<div class="depunit"><a	href='PerConnList.aspx?departID=407fae15-0250-4fc7-b76d-fc0be3fdc2ea'>·局领导</a></div>
-				
+				<div id='' style="display: " class="department">
+					<s:iterator value="departments" var="dep" status="s">
+					<div class="depunit"><a	href='list?depid=${dep.id }'>·${dep.name }</a></div>
+					</s:iterator>
 				</div>
 				</td>
 			</tr>
@@ -260,8 +255,6 @@ timeprint();
   </tr>
 </table>
 		<!-- main -->
-		
-		</form>
 </body>
 </html>
 
