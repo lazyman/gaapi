@@ -17,7 +17,7 @@
 <body>
 <div id="top">
 	<div id="importpanel"><a href="import">工资数据导入</a></div>
-	<div id="logininfo">${session["gongzi.loginuser"].membername} <a href="logout">退出</a></div>
+	<div id="logininfo">${session["tzoa.loginuser"].membername} <a href="logout">退出</a></div>
 </div>
 
 <h1 align="center">工资查询</h1>
@@ -111,7 +111,7 @@
 <TD class=Normal width=100>${wage.id.code }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.name }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.deptcode }&nbsp;</TD>
-<TD class=Normal width=100 >${session["gongzi.loginuser"].department.name }&nbsp;</TD>
+<TD class=Normal width=100 >${session["tzoa.loginuser"].department.name }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.zhiwuGz }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.jibieGz }&nbsp;</TD>
 <TD class=Normal width=100 >${wage.jishudengjiGz }&nbsp;</TD>

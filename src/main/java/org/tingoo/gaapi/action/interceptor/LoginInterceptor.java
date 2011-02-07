@@ -14,7 +14,7 @@ import com.opensymphony.xwork2.interceptor.Interceptor;
 public class LoginInterceptor implements Interceptor {
 	private static Log logger = LogFactory.getLog(LoginInterceptor.class);
 	
-	public static final String USER_SESSION_KEY="gongzi.loginuser";
+	public static final String USER_SESSION_KEY="tzoa.loginuser";
 	public static final String COOKIE_REMEMBERME_KEY="wallet.cookie.rememberme";
 	public static final String GOING_TO_URL_KEY="GOING_TO";
 	

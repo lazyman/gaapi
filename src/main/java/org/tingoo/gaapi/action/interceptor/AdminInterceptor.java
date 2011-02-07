@@ -30,18 +30,9 @@ public class AdminInterceptor extends ValidationAwareSupport implements Intercep
 		Map session = actionContext.getSession();
 		MemberDetail member = (MemberDetail) session.get(LoginInterceptor.USER_SESSION_KEY);
 
-		Session s = ImportUtil.getSession();
-		String hql = "from User u where u.memberDetail = ? ";
-		Query q = s.createQuery(hql);
 		
-		q.setEntity(0, member);
-		
-		List<User> users = q.list();
-		s.close();
-		
-		if(users.size() > 0) {
-			User u = users.get(0);
-			session.put(ADMIN_SESSION_KEY, u);
+		// 判断是否管理员
+		if(isAdmin(member)) {
 			
 			return invocation.invoke();
 		} else {
@@ -51,6 +42,20 @@ public class AdminInterceptor extends ValidationAwareSupport implements Intercep
 			
 			return "login";
 		}
+	}
+	public boolean isAdmin(MemberDetail member) {
+		Session s = ImportUtil.getSession();
+		String hql = "from User u where u.memberDetail = ? ";
+		Query q = s.createQuery(hql);
+		
+		q.setEntity(0, member);
+		
+		List<User> users = q.list();
+		s.close();
+
+//		User u = users.get(0);
+//		session.put(ADMIN_SESSION_KEY, u);
+		return users.size()>0;
 	}
 
 	public String getMessage() {
