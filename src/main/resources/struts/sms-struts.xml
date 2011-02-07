@@ -5,7 +5,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="gz" extends="struts-default" namespace="/gz">
+	<package name="sms" extends="struts-default" namespace="/sms">
 		
 		<interceptors>
 			
@@ -28,30 +28,24 @@
 		<default-action-ref name="index"></default-action-ref>
 		
 		<global-results>
-			<result name="login">index.jsp</result>
+			<result name="login">login.jsp</result>
 		</global-results>
 		
 		<action name="login" class="org.tingoo.gaapi.action.gz.LoginAction" >
-			<result type="redirect">search</result>
+			<result>smsinput</result>
 		</action>
 		<action name="logout" class="org.tingoo.gaapi.action.gz.LoginAction" method="logout" >
+			<result name="login">login.jsp</result>
 		</action>
 		
-		<action name="index">
-			<result>index.jsp</result>
+		<action name="smsinput" class="org.tingoo.gaapi.action.sms.SmsAction" >
+			<result>smsinput.jsp</result>
+			<interceptor-ref name="loginInterceptor"></interceptor-ref>
 		</action>
-		
-		<action name="import" class="org.tingoo.gaapi.action.gz.ImportAction">
-			<result>import.jsp</result>
-			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
+		<action name="sendsms" class="org.tingoo.gaapi.action.sms.SendAction" >
+			<result>send.jsp</result>
+			<interceptor-ref name="loginInterceptor"></interceptor-ref>
 		</action>
-		<action name="dealimport" class="org.tingoo.gaapi.action.gz.ImportAction" method="dealimport">
-			<result>importok.jsp</result>
-			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
-		</action>
-		<action name="search" class="org.tingoo.gaapi.action.gz.SearchAction">
-			<result>search.jsp</result>
-			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
-		</action>
+
 	</package>
 </struts>
