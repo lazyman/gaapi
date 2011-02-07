@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.gz.action;
+package org.tingoo.gaapi.action.gz;
 
 import java.io.UnsupportedEncodingException;
 import java.security.NoSuchAlgorithmException;
@@ -15,9 +15,9 @@ import org.apache.struts2.interceptor.ServletResponseAware;
 import org.apache.struts2.interceptor.SessionAware;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.tingoo.gaapi.gz.action.interceptor.LoginInterceptor;
-import org.tingoo.gaapi.gz.bean.MemberDetail;
-import org.tingoo.gaapi.gz.util.ImportUtil;
+import org.tingoo.gaapi.action.gz.interceptor.LoginInterceptor;
+import org.tingoo.gaapi.bean.MemberDetail;
+import org.tingoo.gaapi.util.ImportUtil;
 
 import com.opensymphony.xwork2.ValidationAwareSupport;
 

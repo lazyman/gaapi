@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.gz.action.interceptor;
+package org.tingoo.gaapi.action.gz.interceptor;
 
 import java.util.List;
 import java.util.Map;
@@ -7,9 +7,9 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.tingoo.gaapi.gz.bean.MemberDetail;
-import org.tingoo.gaapi.gz.bean.User;
-import org.tingoo.gaapi.gz.util.ImportUtil;
+import org.tingoo.gaapi.bean.MemberDetail;
+import org.tingoo.gaapi.bean.User;
+import org.tingoo.gaapi.util.ImportUtil;
 
 import com.opensymphony.xwork2.ActionContext;
 import com.opensymphony.xwork2.ActionInvocation;

@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.gz.action;
+package org.tingoo.gaapi.action.gz;
 
 import java.util.List;
 
@@ -9,10 +9,10 @@ import org.apache.commons.logging.LogFactory;
 import org.apache.struts2.interceptor.ServletRequestAware;
 import org.hibernate.Query;
 import org.hibernate.Session;
-import org.tingoo.gaapi.gz.action.interceptor.LoginInterceptor;
-import org.tingoo.gaapi.gz.bean.MemberDetail;
-import org.tingoo.gaapi.gz.bean.Wage;
-import org.tingoo.gaapi.gz.util.ImportUtil;
+import org.tingoo.gaapi.action.gz.interceptor.LoginInterceptor;
+import org.tingoo.gaapi.bean.MemberDetail;
+import org.tingoo.gaapi.bean.Wage;
+import org.tingoo.gaapi.util.ImportUtil;
 
 public class SearchAction implements ServletRequestAware {
 	private static Log logger = LogFactory.getLog(SearchAction.class);

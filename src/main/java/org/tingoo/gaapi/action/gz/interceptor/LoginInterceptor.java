@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.gz.action.interceptor;
+package org.tingoo.gaapi.action.gz.interceptor;
 
 
 import java.util.Map;

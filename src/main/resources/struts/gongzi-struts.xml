@@ -9,13 +9,13 @@
 		
 		<interceptors>
 			
-			<interceptor name="loginInterceptor" class="org.tingoo.gaapi.gz.action.interceptor.LoginInterceptor"></interceptor>
+			<interceptor name="loginInterceptor" class="org.tingoo.gaapi.action.gz.interceptor.LoginInterceptor"></interceptor>
 			<interceptor-stack name="loginDefaultStack">
 				<interceptor-ref name="loginInterceptor"></interceptor-ref>
 				<interceptor-ref name="defaultStack"></interceptor-ref>
 			</interceptor-stack>
 			
-			<interceptor name="adminInterceptor" class="org.tingoo.gaapi.gz.action.interceptor.AdminInterceptor"></interceptor>
+			<interceptor name="adminInterceptor" class="org.tingoo.gaapi.action.gz.interceptor.AdminInterceptor"></interceptor>
 			<interceptor-stack name="adminDefaultStack">
 				<interceptor-ref name="loginInterceptor"></interceptor-ref>
 				<interceptor-ref name="adminInterceptor"></interceptor-ref>
@@ -31,10 +31,10 @@
 			<result name="login">index.jsp</result>
 		</global-results>
 		
-		<action name="login" class="org.tingoo.gaapi.gz.action.LoginAction" >
+		<action name="login" class="org.tingoo.gaapi.action.gz.LoginAction" >
 			<result type="redirect">search</result>
 		</action>
-		<action name="logout" class="org.tingoo.gaapi.gz.action.LoginAction" method="logout" >
+		<action name="logout" class="org.tingoo.gaapi.action.gz.LoginAction" method="logout" >
 			<result type="redirect">index.jsp</result>
 		</action>
 		
@@ -42,15 +42,15 @@
 			<result>index.jsp</result>
 		</action>
 		
-		<action name="import" class="org.tingoo.gaapi.gz.action.ImportAction">
+		<action name="import" class="org.tingoo.gaapi.action.gz.ImportAction">
 			<result>import.jsp</result>
 			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
 		</action>
-		<action name="dealimport" class="org.tingoo.gaapi.gz.action.ImportAction" method="dealimport">
+		<action name="dealimport" class="org.tingoo.gaapi.action.gz.ImportAction" method="dealimport">
 			<result>importok.jsp</result>
 			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
 		</action>
-		<action name="search" class="org.tingoo.gaapi.gz.action.SearchAction">
+		<action name="search" class="org.tingoo.gaapi.action.gz.SearchAction">
 			<result>search.jsp</result>
 			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
 		</action>

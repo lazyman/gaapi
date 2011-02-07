@@ -3,15 +3,15 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.gz.bean.Fault" table="fault_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.bean.Fault" table="fault_" schema="dbo" catalog="gaapi">
         <id name="id" type="int">
             <column name="id_" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="memberDetailByPostman" class="org.tingoo.gaapi.gz.bean.MemberDetail" fetch="select">
+        <many-to-one name="memberDetailByPostman" class="org.tingoo.gaapi.bean.MemberDetail" fetch="select">
             <column name="postman_" length="50" />
         </many-to-one>
-        <many-to-one name="memberDetailByOpman" class="org.tingoo.gaapi.gz.bean.MemberDetail" fetch="select">
+        <many-to-one name="memberDetailByOpman" class="org.tingoo.gaapi.bean.MemberDetail" fetch="select">
             <column name="opman_" length="50" />
         </many-to-one>
         <property name="description" type="clob">
@@ -30,7 +30,7 @@
             <key>
                 <column name="fault_" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.gz.bean.Process" />
+            <one-to-many class="org.tingoo.gaapi.bean.Process" />
         </set>
     </class>
 </hibernate-mapping>
