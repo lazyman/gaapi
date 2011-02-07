@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.action;
+package org.tingoo.gaapi.gz.action;
 
 
 import junit.framework.TestCase;

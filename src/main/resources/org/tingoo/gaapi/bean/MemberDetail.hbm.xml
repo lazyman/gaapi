@@ -3,12 +3,12 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.MemberDetail" table="member_detail_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.gz.bean.MemberDetail" table="member_detail_" schema="dbo" catalog="gaapi">
         <id name="id" type="string">
             <column name="id_" length="50" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="department" class="org.tingoo.gaapi.bean.Department" fetch="select">
+        <many-to-one name="department" class="org.tingoo.gaapi.gz.bean.Department" fetch="select">
             <column name="department_" length="50" />
         </many-to-one>
         <property name="username" type="string">
@@ -78,37 +78,37 @@
             <key>
                 <column name="owner_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Group" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.Group" />
         </set>
         <set name="faultsForPostman" inverse="true" lazy="true" table="fault_" fetch="select">
             <key>
                 <column name="postman_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Fault" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.Fault" />
         </set>
         <set name="processes" inverse="true" lazy="true" table="process_" fetch="select">
             <key>
                 <column name="opman_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Process" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.Process" />
         </set>
         <set name="users" inverse="true" lazy="true" table="user_" fetch="select">
             <key>
                 <column name="member_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.User" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.User" />
         </set>
         <set name="groupContacts" inverse="true" lazy="true" table="group_contact_" fetch="select">
             <key>
                 <column name="user_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.GroupContact" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.GroupContact" />
         </set>
         <set name="faultsForOpman" inverse="true" lazy="true" table="fault_" fetch="select">
             <key>
                 <column name="opman_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Fault" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.Fault" />
         </set>
     </class>
 </hibernate-mapping>

@@ -3,8 +3,8 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-20 17:54:51 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Wage" table="wage_" schema="dbo" catalog="gaapi">
-        <composite-id name="id" class="org.tingoo.gaapi.bean.WageId">
+    <class name="org.tingoo.gaapi.gz.bean.Wage" table="wage_" schema="dbo" catalog="gaapi">
+        <composite-id name="id" class="org.tingoo.gaapi.gz.bean.WageId">
             <key-property name="code" type="string">
                 <column name="code_" length="10" />
             </key-property>

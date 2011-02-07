@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Smslog" table="smslog_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.gz.bean.Smslog" table="smslog_" schema="dbo" catalog="gaapi">
         <id name="id" type="int">
             <column name="id_" />
             <generator class="assigned" />

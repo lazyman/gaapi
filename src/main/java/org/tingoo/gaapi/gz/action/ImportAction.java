@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.action;
+package org.tingoo.gaapi.gz.action;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -20,9 +20,9 @@ import org.jdom.Document;
 import org.jdom.Element;
 import org.jdom.JDOMException;
 import org.jdom.input.SAXBuilder;
-import org.tingoo.gaapi.bean.Wage;
-import org.tingoo.gaapi.bean.WageId;
-import org.tingoo.gaapi.util.ImportUtil;
+import org.tingoo.gaapi.gz.bean.Wage;
+import org.tingoo.gaapi.gz.bean.WageId;
+import org.tingoo.gaapi.gz.util.ImportUtil;
 
 public class ImportAction {
 	private static Log logger = LogFactory.getLog(ImportAction.class);

@@ -9,6 +9,7 @@
 	-->
 	
 	<include file="struts/gongzi-struts.xml"></include>
+	<include file="struts/txl-struts.xml"></include>
 	
 	<!-- 
 	<include file="struts/user-struts.xml"></include>

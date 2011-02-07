@@ -241,7 +241,7 @@ timeprint();
 			<tr>
 				<td height="24" colspan="5" class="right"><a href="#"
 					onclick="showdepart('cf3cf317-9268-4e45-9ee8-e8866a548404')"><font
-					color="red">〖公安〗</font></a></td>
+					color="red">〖公安局〗</font></a></td>
 			</tr>
 			<tr>
 				<td width="100%">

@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.util;
+package org.tingoo.gaapi.gz.util;
 
 import java.io.UnsupportedEncodingException;
 import java.rmi.RemoteException;
@@ -22,8 +22,8 @@ import org.hibernate.Transaction;
 import org.tempuri.orgquery.OrgQuery;
 import org.tempuri.orgquery.OrgQueryLocator;
 import org.tempuri.orgquery.OrgQuerySoapStub;
-import org.tingoo.gaapi.bean.Department;
-import org.tingoo.gaapi.bean.MemberDetail;
+import org.tingoo.gaapi.gz.bean.Department;
+import org.tingoo.gaapi.gz.bean.MemberDetail;
 
 import cn.com.lazyhome.util.HibernateUtil;
 

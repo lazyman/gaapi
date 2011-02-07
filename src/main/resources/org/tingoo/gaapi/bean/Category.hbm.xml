@@ -3,12 +3,12 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Category" table="category_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.gz.bean.Category" table="category_" schema="dbo" catalog="gaapi">
         <id name="id" type="int">
             <column name="id_" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="category" class="org.tingoo.gaapi.bean.Category" fetch="select">
+        <many-to-one name="category" class="org.tingoo.gaapi.gz.bean.Category" fetch="select">
             <column name="parent_" />
         </many-to-one>
         <property name="code" type="string">
@@ -24,7 +24,7 @@
             <key>
                 <column name="parent_" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.Category" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.Category" />
         </set>
     </class>
 </hibernate-mapping>

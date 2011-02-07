@@ -5,7 +5,7 @@
     "http://struts.apache.org/dtds/struts-2.0.dtd">
 
 <struts>
-	<package name="gz" extends="struts-default" namespace="/gz">
+	<package name="txl" extends="struts-default" namespace="/txl">
 		
 		<interceptors>
 			
@@ -31,28 +31,15 @@
 			<result name="login">index.jsp</result>
 		</global-results>
 		
-		<action name="login" class="org.tingoo.gaapi.gz.action.LoginAction" >
-			<result type="redirect">search</result>
-		</action>
-		<action name="logout" class="org.tingoo.gaapi.gz.action.LoginAction" method="logout" >
-			<result type="redirect">index.jsp</result>
-		</action>
-		
-		<action name="index">
+		<action name="index" class="org.tingoo.gaapi.gz.action.txl.IndexAction">
 			<result>index.jsp</result>
 		</action>
 		
-		<action name="import" class="org.tingoo.gaapi.gz.action.ImportAction">
-			<result>import.jsp</result>
-			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
-		</action>
-		<action name="dealimport" class="org.tingoo.gaapi.gz.action.ImportAction" method="dealimport">
-			<result>importok.jsp</result>
-			<interceptor-ref name="adminDefaultStack"></interceptor-ref>
+		<action name="list" class="org.tingoo.gaapi.gz.action.ListAction">
+			<result>list.jsp</result>
 		</action>
 		<action name="search" class="org.tingoo.gaapi.gz.action.SearchAction">
 			<result>search.jsp</result>
-			<interceptor-ref name="loginDefaultStack"></interceptor-ref>
 		</action>
 	</package>
 </struts>

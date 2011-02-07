@@ -1,4 +1,4 @@
-package org.tingoo.gaapi.bean;
+package org.tingoo.gaapi.gz.bean;
 
 // Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA
 

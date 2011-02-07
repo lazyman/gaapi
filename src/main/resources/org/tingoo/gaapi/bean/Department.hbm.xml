@@ -3,7 +3,7 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Department" table="department_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.gz.bean.Department" table="department_" schema="dbo" catalog="gaapi">
         <id name="id" type="string">
             <column name="id_" length="50" />
             <generator class="assigned" />
@@ -42,7 +42,7 @@
             <key>
                 <column name="department_" length="50" />
             </key>
-            <one-to-many class="org.tingoo.gaapi.bean.MemberDetail" />
+            <one-to-many class="org.tingoo.gaapi.gz.bean.MemberDetail" />
         </set>
     </class>
 </hibernate-mapping>

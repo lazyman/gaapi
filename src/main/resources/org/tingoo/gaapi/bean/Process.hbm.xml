@@ -3,15 +3,15 @@
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <!-- Generated 2011-1-14 9:02:39 by Hibernate Tools 3.2.4.GA -->
 <hibernate-mapping>
-    <class name="org.tingoo.gaapi.bean.Process" table="process_" schema="dbo" catalog="gaapi">
+    <class name="org.tingoo.gaapi.gz.bean.Process" table="process_" schema="dbo" catalog="gaapi">
         <id name="id" type="int">
             <column name="id_" />
             <generator class="assigned" />
         </id>
-        <many-to-one name="fault" class="org.tingoo.gaapi.bean.Fault" fetch="select">
+        <many-to-one name="fault" class="org.tingoo.gaapi.gz.bean.Fault" fetch="select">
             <column name="fault_" />
         </many-to-one>
-        <many-to-one name="memberDetail" class="org.tingoo.gaapi.bean.MemberDetail" fetch="select">
+        <many-to-one name="memberDetail" class="org.tingoo.gaapi.gz.bean.MemberDetail" fetch="select">
             <column name="opman_" length="50" />
         </many-to-one>
         <property name="optype" type="string">
