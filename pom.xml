@@ -3,13 +3,14 @@
   <parent>
     <artifactId>webpom</artifactId>
     <groupId>cn.com.lazyhome.pom</groupId>
-    <version>2</version>
+    <version>3.1.1</version>
   </parent>
   <groupId>org.tingoo.ga</groupId>
   <artifactId>gaapi</artifactId>
   <name>gaapi for gaweb</name>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>0.0.2-SNAPSHOT</version>
   <packaging>war</packaging>
+  <description> </description>
   <scm>
   	<connection>scm:git:http://github.com:lazyman/gaapi.git</connection>
   	<developerConnection>git:ssh://git@github.com:lazyman/gaapi.git</developerConnection>
@@ -35,45 +36,9 @@
 	</build>
   <dependencies>
     <dependency>
-    	<groupId>org.hibernate</groupId>
-    	<artifactId>hibernate</artifactId>
-    	<version>3.2.7.ga</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.logicalcobwebs</groupId>
-    	<artifactId>proxool</artifactId>
-    	<version>0.9.1</version>
-    	<scope>runtime</scope>
-    </dependency>
-    <dependency>
     	<groupId>org.json</groupId>
     	<artifactId>json</artifactId>
     	<version>20090211</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.apache.axis</groupId>
-    	<artifactId>axis</artifactId>
-    	<version>1.4</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.apache.axis</groupId>
-    	<artifactId>axis-jaxrpc</artifactId>
-    	<version>1.4</version>
-    </dependency>
-    <dependency>
-    	<groupId>commons-discovery</groupId>
-    	<artifactId>commons-discovery</artifactId>
-    	<version>0.2</version>
-    </dependency>
-    <dependency>
-    	<groupId>axis</groupId>
-    	<artifactId>axis-wsdl4j</artifactId>
-    	<version>1.5.1</version>
-    </dependency>
-    <dependency>
-    	<groupId>org.apache.axis</groupId>
-    	<artifactId>axis-saaj</artifactId>
-    	<version>1.4</version>
     </dependency>
     <dependency>
     	<groupId>org.apache.struts</groupId>
@@ -82,35 +47,10 @@
     	<type>jar</type>
     </dependency>
     <dependency>
-    	<groupId>commons-logging</groupId>
-    	<artifactId>commons-logging</artifactId>
-    	<version>1.1.1</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
-    </dependency>
-    <dependency>
-    	<groupId>log4j</groupId>
-    	<artifactId>log4j</artifactId>
-    	<version>1.2.14</version>
-    </dependency>
-    <dependency>
-    	<groupId>junit</groupId>
-    	<artifactId>junit</artifactId>
-    	<version>3.8.2</version>
-    	<scope>test</scope>
-    </dependency>
-    <dependency>
     	<groupId>com.oracle</groupId>
     	<artifactId>ojdbc14</artifactId>
     	<version>9.2.0.8</version>
     	<scope>runtime</scope>
-    </dependency>
-    <dependency>
-    	<groupId>jboss</groupId>
-    	<artifactId>javassist</artifactId>
-    	<version>3.7.ga</version>
-    	<type>jar</type>
-    	<scope>compile</scope>
     </dependency>
     <dependency>
     	<groupId>net.sourceforge.htmlcleaner</groupId>
@@ -118,6 +58,10 @@
     	<version>2.1</version>
     	<type>jar</type>
     	<scope>compile</scope>
+    </dependency>
+    <dependency>
+    	<groupId>taglibs</groupId>
+    	<artifactId>standard</artifactId>
     </dependency>
   </dependencies>
 </project>
