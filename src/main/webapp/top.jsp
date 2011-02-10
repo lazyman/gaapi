@@ -10,7 +10,7 @@
 <link href="res/css/zt_dch.css" type="text/css" rel="stylesheet" />
 <link href="res/css/style.css" rel="stylesheet" type="text/css" />
 
-<script type="text/javascript" src="res/js/prototype.js"></script> 
+<script type="text/javascript" src="res/js/prototype-1.6.1.js"></script> 
 <script type="text/javascript">
 	function showunderline(op, tin) {
 		if (tin == true) {
