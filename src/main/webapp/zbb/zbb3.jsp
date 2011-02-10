@@ -79,7 +79,7 @@
 	local_t = duty.getLocalDuty(today);
 	local_r = duty.getLocalDuty(reqDate);
 %>
-<script type="text/javascript" src="../res/js/prototype-1.6.1.js"></script>
+<script type="text/javascript" src="../res/js/jquery-1.5.js"></script>
 <style type="text/css">
 body {
 	FONT-FAMILY: "宋体";
@@ -137,13 +137,30 @@ a:visited {
 		}
 	}
 
-	var local_t = "<%= local_t.toString() %>";
-	var local_r = "<%= local_r.toString() %>";
+	var local_t = '<%= local_t.toString() %>';
+	var local_r = '<%= local_r.toString() %>';
+
+	function showLocalDuty() {
+		var header = $("#todayHeader");//.append();
+		var tr = header;
+
+		for(var i=0; i<local_t.depts.length; i++) {
+			tr = tr.append("tr");
+			var dept = local_t.depts[i];
+			
+			var td;
+			td = tr.add("td").text(dept.deptname);
+			td = td.append("td").text(dept.tel);
+			td = td.append("td").text(dept.intel);
+		}
+	}
+	
 </script>
 </head>
 <body>
 <div id="maincontant">
 <h1></h1>
+<div id="today">
 <div class="contantTitle">
 值班时间从当天8：00至次日8：00止<br />
 <b>今日值班表（<%=todyFomate.format(today.getTime()) %>）</b>
@@ -163,11 +180,11 @@ a:visited {
 <div>&nbsp;</div>
 </div>
 <div class="rightcontant">
-<table width="100%" border="1" cellpadding="0" cellspacing="0">
+<table width="100%" border="1" cellpadding="0" cellspacing="0" id="today">
 	<tr>
 		<th colspan="5">动态管控值班表 [<a href="http://www.yhx.tzs.zj/gaweb2003/zbb/system/index.asp">管理登录</a>]</th>
 	</tr>
-	<tr>
+	<tr id="todayHeader">
 		<th bgcolor="#C0C0C0" nowrap="nowrap" width="127">单位</th>
 		<th bgcolor="#C0C0C0" nowrap="nowrap" width="142">值班电话</th>
 		<th bgcolor="#C0C0C0" nowrap="nowrap" width="69">内线</th>
@@ -223,9 +240,10 @@ a:visited {
 	%>
 </table>
 </div>
+</div>
 
 
-
+<div id="request">
 <div class="contantTitle">
 <span style="float: left">
 
@@ -305,6 +323,7 @@ a:visited {
 		}
 	%>
 </table>
+</div>
 </div>
 </div>
 </body>
